@@ -2,14 +2,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-secondary-bg: #222;
+  /* Background colors */
+  --color-secondary-bg: #1c1c1c;
   --color-secondary-bg-hover: #2d2d2d;
+  --color-tertiary-bg: #2c2c2c;
+
+  /* Border colors */
   --color-border: #373737;
 
+  /* Font colors */
   --color-secondary-font: #747474;
 
+  /* Additional colors */
   --color-contrast: #f32b24;
 
+  /* Animations */
   --animate-fade-in-bottom: fadeInBottom 0.3s ease;
   --animate-carousel-left: carouselLeft 50s linear infinite;
   --animate-carousel-right: carouselRight 50s linear infinite;
