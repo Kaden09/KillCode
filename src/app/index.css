@@ -11,6 +11,8 @@
   --color-contrast: #f32b24;
 
   --animate-fade-in-bottom: fadeInBottom 0.3s ease;
+  --animate-carousel-left: carouselLeft 50s linear infinite;
+  --animate-carousel-right: carouselRight 50s linear infinite;
 }
 
 @keyframes fadeInBottom {
@@ -24,6 +26,24 @@
   }
 }
 
+@keyframes carouselLeft {
+  0% {
+    left: -2573px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes carouselRight {
+  0% {
+    right: -2573px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
 body {
   width: 100%;
   height: 100svh;
@@ -31,4 +51,5 @@ body {
   font-family: "IBM Plex Mono", monospace;
   color: white;
   padding-inline: 78px;
+  overflow: hidden;
 }
