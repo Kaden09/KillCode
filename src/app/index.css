@@ -6,12 +6,15 @@
   --color-secondary-bg: #1c1c1c;
   --color-secondary-bg-hover: #2d2d2d;
   --color-tertiary-bg: #2c2c2c;
+  --color-contrast-bg: #fff;
+  --color-contrast-bg-hover: #dfdfdf;
 
   /* Border colors */
   --color-border: #373737;
 
   /* Font colors */
   --color-secondary-font: #747474;
+  --color-tertiary-font: #000;
 
   /* Additional colors */
   --color-contrast: #f32b24;
@@ -58,5 +61,6 @@ body {
   font-family: "IBM Plex Mono", monospace;
   color: white;
   padding-inline: 78px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

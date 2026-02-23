@@ -2,7 +2,7 @@ import { Footer } from "@/features/footer";
 import { Header } from "../features/header";
 import { ProductSection } from "@/features/products";
 import { LargeContactsList } from "@/features/contacts";
-import { TrustItem } from "@/features/contacts-section";
+import { ContactsForm, TrustItem } from "@/features/contacts-section";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Header />
       <ProductSection />
       <TrustItem title="Оперативный ответ" />
+      <ContactsForm />
       <LargeContactsList />
       <Footer />
     </div>
