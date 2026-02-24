@@ -1,7 +1,6 @@
 import { Footer } from "@/features/footer";
 import { Header } from "../features/header";
 import { ProductSection } from "@/features/products";
-import { LargeContactsList } from "@/features/contacts";
 import { ContactsSection } from "@/features/contacts-section";
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
       <Header />
       <ProductSection />
       <ContactsSection />
-      <LargeContactsList />
       <Footer />
     </div>
   );
