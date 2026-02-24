@@ -11,6 +11,9 @@ function Navbar() {
         <li className="cursor-pointer hover:text-secondary-font duration-100">
           Контакты
         </li>
+        <li className="cursor-pointer hover:text-secondary-font duration-100">
+          Портфолио
+        </li>
       </ul>
     </nav>
   );
