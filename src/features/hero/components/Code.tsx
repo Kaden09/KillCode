@@ -68,16 +68,16 @@ print(f"Stack: {', '.join(studio.stack)} // {studio}")
 
   return (
     <div className="relative">
-      <div className="bg-secondary-bg rounded-4xl pt-5 pl-9 pb-2 pr-30 border border-border rounded-r-none border-r-0 relative">
+      <div className="bg-secondary-bg rounded-[44px] pt-5 pl-9 pb-2 pr-30 border border-border rounded-r-none border-r-0 relative">
         <div className="flex items-center">
           <div className="flex gap-3">
             <div className="w-3 h-3 bg-contrast rounded-full"></div>
             <div className="w-3 h-3 bg-white rounded-full"></div>
             <div className="w-3 h-3 bg-secondary-font rounded-full"></div>
           </div>
-          <p className="text-secondary-font ml-60 text-sm">Killcode.py</p>
+          <p className="text-secondary-font ml-70">Killcode.py</p>
         </div>
-        <pre className="whitespace-pre-wrap text-sm">
+        <pre className="whitespace-pre-wrap text-[17px]">
           {highlightWords(pythonCode)}
         </pre>
       </div>

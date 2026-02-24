@@ -2,7 +2,10 @@ import AdvantageItemsList from "./AdvantageItemsList";
 
 function AdvantagesSection() {
   return (
-    <div className="flex flex-col justify-center items-center gap-10">
+    <div
+      id="advantages"
+      className="flex flex-col justify-center items-center gap-15 py-50"
+    >
       <div className="flex flex-col gap-3">
         <h2 className="text-6xl text-center font-semibold">
           Наши <span className="text-contrast">преимущества</span>

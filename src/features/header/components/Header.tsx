@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <header className="flex justify-between items-center py-4">
+    <header className="flex justify-between items-center py-4 w-full">
       <Logo />
       <Navbar />
       <LanguageSwitcher />

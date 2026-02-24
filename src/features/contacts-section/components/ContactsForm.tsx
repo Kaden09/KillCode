@@ -1,6 +1,6 @@
 function ContactsForm() {
   return (
-    <form className="flex flex-col gap-2 bg-secondary-bg p-4 rounded-3xl border border-border w-full h-full">
+    <form className="flex flex-col gap-3 bg-secondary-bg p-4 rounded-3xl border border-border w-full h-full">
       <div className="flex gap-3">
         <input
           type="text"
@@ -9,7 +9,7 @@ function ContactsForm() {
         />
         <input
           type="email"
-          placeholder="E-mail"
+          placeholder="Контакт"
           className="bg-tertiary-bg rounded-2xl py-4 px-5 outline-none w-full"
         />
       </div>
