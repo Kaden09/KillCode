@@ -5,15 +5,15 @@ import { ContactsSection } from "@/features/contacts-section";
 import { TechonolyItem } from "@/features/technology";
 import { TelegramIcon } from "@/shared/assets";
 import { AdvantagesSection } from "@/features/adventages";
-import { Code } from "@/features/hero";
+import { HeroSection } from "@/features/hero";
 
 function App() {
   return (
     <div className="flex flex-col justify-between h-svh max-w-340">
       <Header />
-      <Code />
-      <AdvantagesSection />
+      <HeroSection />
       <ProductSection />
+      <AdvantagesSection />
       <ContactsSection />
       <TechonolyItem icon={<TelegramIcon />} />
       <Footer />

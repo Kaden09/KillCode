@@ -17,7 +17,7 @@ function LanguageSwitcherModal({
   return (
     <ul
       onClick={() => setModalOpen(false)}
-      className={`flex items-center flex-col border border-border overflow-hidden rounded-xl cursor-pointer bg-secondary-bg w-full animate-fade-in-bottom ${className}`}
+      className={`flex items-center flex-col border border-border overflow-hidden rounded-xl cursor-pointer bg-secondary-bg w-full animate-fade-in-bottom z-99 ${className}`}
     >
       <li
         onClick={() => setSelectedLanguage(LANGUAGE.RU)}

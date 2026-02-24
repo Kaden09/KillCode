@@ -1,27 +1,27 @@
 function Code() {
   const pythonCode = `
-    import this
-    from datetime import datetime
+import this
+from datetime import datetime
 
-    class KillCode:
-        """Where ideas become production"""
+class KillCode:
+    """Where ideas become production"""
                         
-        def __init__(self):
-            self.since = 2025
-            self.stack = ('Solidity', 'React', 'Python', 'Go', '...')
-            self._secret_sauce = 0.42  # answer to everything
+    def __init__(self):
+        self.since = 2025
+        self.stack = ('Solidity', 'React', 'Python', 'Go', '...')
+        self._secret_sauce = 0.42  # answer to everything
                         
-        def ship(self, idea, tough=False):
-            if tough:
-                return f"⚡ {idea}? Consider it overengineered"
-            return f"🚀 {idea} shipped with ❤️"
+    def ship(self, idea, tough=False):
+        if tough:
+            return f"⚡ {idea}? Consider it overengineered"
+        return f"🚀 {idea} shipped with ❤️"
                         
-        def __repr__(self):
-            return f"<KillCode since {self.since} — we eat crypto for breakfast>"
+    def __repr__(self):
+        return f"<KillCode since {self.since} — we eat crypto for breakfast>"
 
-    studio = KillCode()
-    print(studio.ship('DeFi app', tough=True))
-    print(f"Stack: {', '.join(studio.stack)} // {studio}")
+studio = KillCode()
+print(studio.ship('DeFi app', tough=True))
+print(f"Stack: {', '.join(studio.stack)} // {studio}")
     `;
 
   const highlightWords = (text: string) => {
@@ -67,16 +67,21 @@ function Code() {
   };
 
   return (
-    <div className="bg-secondary-bg rounded-4xl pt-5 border border-border">
-      <div className="flex items-center">
-        <div className="flex gap-3 pl-9">
-          <div className="w-3.5 h-3.5 bg-contrast rounded-full"></div>
-          <div className="w-3.5 h-3.5 bg-white rounded-full"></div>
-          <div className="w-3.5 h-3.5 bg-secondary-font rounded-full"></div>
+    <div className="relative">
+      <div className="bg-secondary-bg rounded-4xl pt-5 pl-9 pb-2 pr-30 border border-border rounded-r-none border-r-0 relative">
+        <div className="flex items-center">
+          <div className="flex gap-3">
+            <div className="w-3 h-3 bg-contrast rounded-full"></div>
+            <div className="w-3 h-3 bg-white rounded-full"></div>
+            <div className="w-3 h-3 bg-secondary-font rounded-full"></div>
+          </div>
+          <p className="text-secondary-font ml-60 text-sm">Killcode.py</p>
         </div>
-        <p className="text-secondary-font ml-80">Killcode.py</p>
+        <pre className="whitespace-pre-wrap text-sm">
+          {highlightWords(pythonCode)}
+        </pre>
       </div>
-      <pre className="whitespace-pre-wrap">{highlightWords(pythonCode)}</pre>
+      <div className="h-full w-40 bg-linear-to-l from-[#141414] to-transparent absolute right-0 top-0 pointer-events-none"></div>
     </div>
   );
 }
