@@ -1,6 +1,6 @@
 function ContactsForm() {
   return (
-    <form className="flex flex-col gap-1.5 bg-secondary-bg p-4 rounded-3xl border border-border">
+    <form className="flex flex-col gap-1.5 bg-secondary-bg p-4 rounded-3xl border border-border w-full h-full">
       <div className="flex gap-3">
         <input
           type="text"
@@ -15,7 +15,7 @@ function ContactsForm() {
       </div>
       <textarea
         placeholder="Описание проекта..."
-        className="bg-tertiary-bg py-4 px-5 rounded-2xl w-full h-full max-h-60 outline-none resize-none"
+        className="bg-tertiary-bg py-4 px-5 rounded-2xl w-full h-full outline-none resize-none"
       ></textarea>
       <button
         type="submit"
