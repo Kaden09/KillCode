@@ -4,6 +4,7 @@ import { ProductSection } from "@/features/products";
 import { ContactsSection } from "@/features/contacts-section";
 import { AdvantagesSection } from "@/features/adventages";
 import { HeroSection } from "@/features/hero";
+import { TechnologySection } from "@/features/technology";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HeroSection />
       <ProductSection />
       <AdvantagesSection />
+      <TechnologySection />
       <ContactsSection />
       <Footer />
     </div>

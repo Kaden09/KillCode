@@ -67,7 +67,7 @@ print(f"Stack: {', '.join(studio.stack)} // {studio}")
   };
 
   return (
-    <div className="relative">
+    <div className="relative animate-fade-in-code">
       <div className="bg-secondary-bg rounded-[44px] pt-5 pl-9 pb-2 pr-30 border border-border rounded-r-none border-r-0 relative">
         <div className="flex items-center">
           <div className="flex gap-3">
@@ -81,7 +81,7 @@ print(f"Stack: {', '.join(studio.stack)} // {studio}")
           {highlightWords(pythonCode)}
         </pre>
       </div>
-      <div className="h-full w-40 bg-linear-to-l from-[#141414] to-transparent absolute right-0 top-0 pointer-events-none"></div>
+      <div className="h-full w-30 bg-linear-to-l from-[#141414] to-transparent absolute right-0 top-0 pointer-events-none"></div>
     </div>
   );
 }

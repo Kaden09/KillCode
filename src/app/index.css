@@ -21,10 +21,12 @@
 
   /* Animations */
   --animate-fade-in-bottom: fadeInBottom 0.3s ease;
-  --animate-fade-in-code: fadeInCode 1s ease;
+  --animate-fade-in-code: fadeInCode 1s ease, fadeInCode2 2s ease;
   --animate-fade-in-code-2: fadeInCode2 5s ease;
   --animate-carousel-left: carouselLeft 50s linear infinite;
   --animate-carousel-right: carouselRight 50s linear infinite;
+  --animate-technology-glide: technologyGlide 10s linear infinite;
+  --animate-technology-glide2: technologyGlide2 1s linear infinite;
 }
 
 @keyframes fadeInBottom {
@@ -53,6 +55,33 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes technologyGlide {
+  0% {
+    transform: translateX(0) scale(0);
+  }
+  2% {
+    transform: translateX(20px) scale(1);
+  }
+  50% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes technologyGlide2 {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }
 

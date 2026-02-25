@@ -25,7 +25,7 @@ const data: IAdvantageItem[] = [
 
 function AdvantageItemsList() {
   return (
-    <div className="w-full flex items-center justify-center gap-5">
+    <div className="w-full flex items-center justify-center gap-10">
       {data.map((item) => (
         <AdvantageItem
           key={item.title}

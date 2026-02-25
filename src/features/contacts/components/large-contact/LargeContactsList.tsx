@@ -5,12 +5,12 @@ const data = [
   {
     icon: <GmailIcon />,
     title: "Наш Email",
-    value: "killcode.team@gmail.com",
+    value: "studio@killcode.dev",
     link: "#",
   },
   {
     icon: <TelegramIcon />,
-    title: "Наш Email",
+    title: "Наш Telegram",
     value: "@killcodeteam",
     link: "#",
   },

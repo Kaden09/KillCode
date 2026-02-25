@@ -11,7 +11,7 @@ function ContactsSection() {
             <h2 className="font-bold text-6xl">
               Работа с <span className="text-contrast">нами</span>
             </h2>
-            <p className="text-secondary-font max-w-280 leading-7 text-lg">
+            <p className="text-secondary-font max-w-280 leading-7 text-xl">
               Индивидуальный подход к каждому клиенту, мы стараемся, как можно
               больше погрузиться в тематику проекта и реализовать его с учетом
               всех тонкостей.
