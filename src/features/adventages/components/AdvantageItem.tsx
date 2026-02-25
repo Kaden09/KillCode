@@ -1,12 +1,24 @@
-export interface IAdvantageItem {
+import type { HTMLAttributes } from "react";
+import { useInView } from "react-intersection-observer";
+
+export interface IAdvantageItem extends HTMLAttributes<HTMLDivElement> {
   icon: React.ReactNode;
   title: string;
   description: string;
 }
 
-function AdvantageItem({ icon, title, description }: IAdvantageItem) {
+function AdvantageItem({ icon, title, description, ...props }: IAdvantageItem) {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true, // Срабатывает только один раз
+  });
+
   return (
-    <div className="relative w-full max-w-170 h-full">
+    <div
+      ref={ref}
+      className={`relative w-full max-w-170 h-full opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
+      {...props}
+    >
       <div className="flex flex-col bg-secondary-bg h-full rounded-4xl border border-border p-8 pt-6 relative z-99 hover:translate-x-0.5 hover:-translate-y-px duration-200">
         <hr className="w-13.75 text-contrast absolute -top-px border-t-2" />
         <div

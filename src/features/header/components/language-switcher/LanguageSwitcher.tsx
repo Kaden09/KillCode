@@ -10,7 +10,10 @@ function LanguageSwitcher() {
   );
 
   return (
-    <div className="relative">
+    <div
+      className="relative opacity-0 animate-fade-in-bottom-1s"
+      style={{ animationDelay: "0.3s" }}
+    >
       <div
         onClick={() => setModalOpen(!modalOpen)}
         className="flex items-center bg-secondary-bg rounded-xl border border-border cursor-pointer hover:bg-secondary-bg-hover duration-100"

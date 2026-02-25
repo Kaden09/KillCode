@@ -26,12 +26,13 @@ const data: IAdvantageItem[] = [
 function AdvantageItemsList() {
   return (
     <div className="w-full flex items-center justify-center gap-10">
-      {data.map((item) => (
+      {data.map((item, index) => (
         <AdvantageItem
           key={item.title}
           icon={item.icon}
           title={item.title}
           description={item.description}
+          style={{ animationDelay: `${index * 0.1}s` }}
         />
       ))}
     </div>

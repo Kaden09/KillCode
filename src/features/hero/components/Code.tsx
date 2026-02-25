@@ -67,7 +67,7 @@ print(f"Stack: {', '.join(studio.stack)} // {studio}")
   };
 
   return (
-    <div className="relative animate-fade-in-code">
+    <div className="relative">
       <div className="bg-secondary-bg rounded-[44px] pt-5 pl-9 pb-2 pr-30 border border-border rounded-r-none border-r-0 relative">
         <div className="flex items-center">
           <div className="flex gap-3">
