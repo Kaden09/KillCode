@@ -192,11 +192,11 @@
     transform: translateY(10px);
   }
   50% {
-    r: 4.4;
+    r: 4;
   }
   100% {
     opacity: 1;
-    r: 4;
+    r: 3.5;
     transform: translateY(0);
   }
 }

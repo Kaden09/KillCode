@@ -4,7 +4,7 @@ import { ProductSection } from "@/features/products";
 import { ContactsSection } from "@/features/contacts-section";
 import { AdvantagesSection } from "@/features/adventages";
 import { HeroSection } from "@/features/hero";
-import Instruction from "@/features/instruction/components/Instruction";
+import InstructionSection from "@/features/instruction/components/InstructionSection";
 // import { TechnologySection } from "@/features/technology";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <HeroSection />
       <ProductSection />
       <AdvantagesSection />
-      <Instruction />
+      <InstructionSection />
       {/* <TechnologySection /> */}
       <ContactsSection />
       <Footer />

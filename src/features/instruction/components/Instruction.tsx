@@ -6,12 +6,18 @@ function Instruction() {
     triggerOnce: true, // Срабатывает только один раз
   });
   return (
-    <div ref={ref} className="relative w-full">
-      <svg viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div ref={ref} className="relative w-full max-w-500">
+      <svg
+        viewBox="0 0 180 50"
+        preserveAspectRatio="xMidYMid meet"
+        className="w-full h-full"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <circle
           cx="15"
           cy="35"
-          r="4"
+          r="3"
           fill="white"
           className={`opacity-0  ${inView && "animate-fade-in-from-small"}`}
           style={{ filter: "drop-shadow(0 0 2px rgba(255,255,255,0.5))" }}
@@ -19,7 +25,7 @@ function Instruction() {
         <circle
           cx="50"
           cy="10"
-          r="4"
+          r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
           style={{
@@ -30,7 +36,7 @@ function Instruction() {
         <circle
           cx="80"
           cy="29"
-          r="4"
+          r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
           style={{
@@ -41,7 +47,7 @@ function Instruction() {
         <circle
           cx="120"
           cy="15"
-          r="4"
+          r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
           style={{
@@ -52,7 +58,7 @@ function Instruction() {
         <circle
           cx="160"
           cy="33"
-          r="4"
+          r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
           style={{
@@ -107,12 +113,12 @@ function Instruction() {
         />
       </svg>
       <div
-        className={`absolute -left-10 top-58 -rotate-20 inline-block bg-secondary-bg rounded-full py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
+        className={`absolute -left-[2%] top-[46%] -rotate-20 inline-block bg-secondary-bg rounded-full py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
         style={{ animationDelay: "1.2s" }}
       >
         <h3>Сейчас вы здесь</h3>
       </div>
-      <div className="absolute bottom-0 -left-8 flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute bottom-0 -left-[0.7%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.2s" }}
@@ -126,7 +132,7 @@ function Instruction() {
           Поможем составить и подобрать референсы под ваш проект
         </p>
       </div>
-      <div className="absolute -top-12 left-77 flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute -top-12 left-[19%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.4s" }}
@@ -140,7 +146,7 @@ function Instruction() {
           Принимаем предоплату 50% перед началом работы
         </p>
       </div>
-      <div className="absolute bottom-14 left-149 flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute bottom-14 left-[35.5%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.6s" }}
@@ -154,7 +160,7 @@ function Instruction() {
           Вы оцените результат и если нужно дадите правки
         </p>
       </div>
-      <div className="absolute top-5 right-102 flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute top-5 right-[24%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.8s" }}
@@ -168,7 +174,7 @@ function Instruction() {
           Доводим результат до идеала
         </p>
       </div>
-      <div className="absolute bottom-6 right-3 flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute bottom-6 right-[2%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1s" }}
