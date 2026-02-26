@@ -6,17 +6,17 @@ from datetime import datetime
 
 class KillCode:
   """Where ideas become production"""
-                      
+
   def __init__(self):
       self.since = 2025
       self.stack = ('Solidity', 'React', 'Python', 'Go', '...')
       self._secret_sauce = 0.42  # answer to everything
-                      
+
   def ship(self, idea, tough=False):
       if tough:
           return f"⚡ {idea}? Consider it overengineered"
       return f"🚀 {idea} shipped with ❤️"
-                      
+
   def __repr__(self):
       return f"<KillCode since {self.since} — we eat crypto for breakfast>"
 
@@ -107,10 +107,10 @@ function Code() {
             Killcode.py
           </p>
         </div>
-        <pre className="whitespace-pre-wrap text-[17px] font-mono">
+        <pre className="whitespace-pre-wrap text-[17px] min-h-full font-mono">
           {highlightWords(displayedCode)}
           {isTyping && (
-            <span className="inline-block w-2 h-5 bg-contrast ml-0.5 animate-pulse" />
+            <span className="inline-block w-2 h-4 bg-contrast ml-0.5 animate-pulse" />
           )}
         </pre>
       </div>
