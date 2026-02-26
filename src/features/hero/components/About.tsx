@@ -1,6 +1,42 @@
 import { AboutBackgroundGrid } from "@/shared/assets";
+import { useEffect, useState } from "react";
 
 function About() {
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  const fullText = "100+ Довольных клиентов";
+  const highlightPart = "100+"; // Часть, которая будет красной
+
+  useEffect(() => {
+    let i = 0;
+    const typingEffect = setInterval(() => {
+      if (i < fullText.length) {
+        setDisplayedText(fullText.slice(0, i + 1));
+        i++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typingEffect);
+      }
+    }, 30); // Скорость печати (можно настроить)
+
+    return () => clearInterval(typingEffect);
+  }, []);
+
+  // Функция для разделения текста на подсвеченную и обычную части
+  const renderHighlightedText = (text: string) => {
+    if (text.startsWith(highlightPart)) {
+      const restOfText = text.slice(highlightPart.length);
+      return (
+        <>
+          <span className="text-contrast">{highlightPart}</span>
+          <span>{restOfText}</span>
+        </>
+      );
+    }
+    return text;
+  };
+
   return (
     <div className="flex flex-col gap-8 w-[50%] relative ml-10">
       <div className="absolute -top-30 -left-10 z-0">
@@ -18,8 +54,14 @@ function About() {
             style={{ animationDelay: "0.2s" }}
           ></div>
         </div>
-        <p className="text-2xl">
-          <span className="text-contrast">100+</span> Довольных клиентов
+        <p
+          className="text-2xl opacity-0 animate-fade-in-left"
+          style={{ animationDelay: "0.2s" }}
+        >
+          {renderHighlightedText(displayedText)}
+          {isTyping && (
+            <span className="inline-block w-0.5 h-6 bg-contrast ml-0.5 animate-pulse" />
+          )}
         </p>
       </div>
       <h1 className="text-6xl font-semibold z-99 mb-2 animate-fade-in-bottom-100">

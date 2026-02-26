@@ -20,7 +20,7 @@
   --color-contrast: #f32b24;
 
   /* Animations */
-  --animate-fade-in-bottom: fadeInBottom 0.3s ease;
+  --animate-fade-in-bottom: fadeInBottom 0.3s ease forwards;
   --animate-fade-in-bottom-1s: fadeInBottom 0.6s ease forwards;
   --animate-fade-in-bottom-100: fadeInBottom100 0.6s ease forwards;
   --animate-fade-in-top: fadeInTop 0.6s ease forwards;
@@ -32,12 +32,28 @@
   --animate-carousel-right: carouselRight 50s linear infinite;
   --animate-technology-glide: technologyGlide 10s linear infinite;
   --animate-technology-glide2: technologyGlide2 1s linear infinite;
+  --animate-draw-line:
+    drawLine 2s linear infinite forwards, fadeInBottomLine 0.6s ease forwards;
+  --animate-draw-red-line:
+    drawLine 2s linear infinite forwards, fadeInTopLine 0.6s ease forwards;
+  --animate-fade-in-from-small: fadeInFromSmall 0.4s ease forwards;
 }
 
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
     transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottomLine {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
   }
   100% {
     opacity: 1;
@@ -60,6 +76,17 @@
   0% {
     opacity: 0;
     transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTopLine {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
   }
   100% {
     opacity: 1;
@@ -152,6 +179,32 @@
   }
 }
 
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: -6;
+  }
+}
+
+@keyframes fadeInFromSmall {
+  0% {
+    opacity: 0;
+    r: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    r: 4.4;
+  }
+  100% {
+    opacity: 1;
+    r: 4;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -164,5 +217,4 @@ body {
   color: white;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-behavior: smooth;
 }

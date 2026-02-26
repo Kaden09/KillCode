@@ -10,7 +10,7 @@ function ContactsSection() {
   });
 
   return (
-    <div className="flex flex-col gap-10 w-full py-50">
+    <div id="contacts" className="flex flex-col gap-10 w-full py-50">
       <div className="flex items-center gap-15 min-h-115">
         <div ref={ref} className="flex flex-col gap-15 max-w-[50%]">
           <div className="flex flex-col gap-6">

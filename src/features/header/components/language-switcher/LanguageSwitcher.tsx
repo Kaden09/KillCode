@@ -11,7 +11,7 @@ function LanguageSwitcher() {
 
   return (
     <div
-      className="relative opacity-0 animate-fade-in-bottom-1s"
+      className="relative opacity-0 animate-fade-in-bottom-1s z-999"
       style={{ animationDelay: "0.3s" }}
     >
       <div

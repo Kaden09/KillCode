@@ -6,6 +6,7 @@ function AboutBackgroundGrid() {
       viewBox="0 0 579 598"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="opacity-0 animate-fade-in-left"
     >
       <line x1="56" y1="389.5" x2="440" y2="389.5" stroke="#232323" />
       <line x1="49" y1="489.5" x2="453" y2="489.5" stroke="#232323" />
