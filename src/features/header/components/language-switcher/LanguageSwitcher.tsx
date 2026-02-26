@@ -1,13 +1,15 @@
 import { ChevronDown, Languages } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import LanguageSwitcherModal from "./LanguageSwitcherModal";
-import { LANGUAGE, type Language } from "../../types/language.type";
+import { I18nContext } from "@/shared/context/i18n-context";
 
 function LanguageSwitcher() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<Language>(
-    LANGUAGE.RU,
-  );
+  const { language, setLanguage } = useContext(I18nContext);
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "ru" : "en");
+  };
 
   return (
     <div
@@ -22,7 +24,7 @@ function LanguageSwitcher() {
           <Languages width={20} className="h-full" />
         </span>
         <div className="flex items-center gap-2 px-4">
-          <h3 className="select-none font-medium">{selectedLanguage}</h3>
+          <h3 className="select-none font-medium">{language.toUpperCase()}</h3>
           <ChevronDown
             className={`duration-150 ${modalOpen && "rotate-180"}`}
           />
@@ -30,8 +32,7 @@ function LanguageSwitcher() {
       </div>
       {modalOpen && (
         <LanguageSwitcherModal
-          selectedLanguage={selectedLanguage}
-          setSelectedLanguage={setSelectedLanguage}
+          toggleLanguage={toggleLanguage}
           setModalOpen={setModalOpen}
           className="absolute top-12 right-0"
         />

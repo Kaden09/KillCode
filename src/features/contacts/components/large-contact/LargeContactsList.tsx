@@ -1,33 +1,39 @@
 import { GmailIcon, TelegramIcon, XIcon } from "@/shared/assets";
-import LargeContact from "./LargeContact";
+import LargeContact, { type ILargeContact } from "./LargeContact";
 import { useInView } from "react-intersection-observer";
-
-const data = [
-  {
-    icon: <GmailIcon />,
-    title: "Наш Email",
-    value: "studio@killcode.dev",
-    link: "#",
-  },
-  {
-    icon: <TelegramIcon />,
-    title: "Наш Telegram",
-    value: "@killcodeteam",
-    link: "#",
-  },
-  {
-    icon: <XIcon />,
-    title: "Наш Twitter",
-    value: "@killcodeteam",
-    link: "#",
-  },
-];
+import { useContext, useMemo } from "react";
+import { I18nContext } from "@/shared/context/i18n-context";
 
 function LargeContactsList() {
+  const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
+
+  const data: ILargeContact[] = useMemo(
+    () => [
+      {
+        icon: <GmailIcon />,
+        title: i18n[language].contacts.contactItems.firstItem.title,
+        value: "studio@killcode.dev",
+        link: "#",
+      },
+      {
+        icon: <TelegramIcon />,
+        title: i18n[language].contacts.contactItems.secondItem.title,
+        value: "@killcodeteam",
+        link: "#",
+      },
+      {
+        icon: <XIcon />,
+        title: i18n[language].contacts.contactItems.tertiaryItem.title,
+        value: "@killcodeteam",
+        link: "#",
+      },
+    ],
+    [language, i18n],
+  );
 
   return (
     <div ref={ref} className="flex gap-3">

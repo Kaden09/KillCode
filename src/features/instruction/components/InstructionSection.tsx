@@ -1,7 +1,10 @@
 import { useInView } from "react-intersection-observer";
 import Instruction from "./Instruction";
+import { useContext } from "react";
+import { I18nContext } from "@/shared/context/i18n-context";
 
 function InstructionSection() {
+  const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true, // Срабатывает только один раз
@@ -18,21 +21,19 @@ function InstructionSection() {
           className={`text-6xl text-center font-semibold opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "" }}
         >
-          <span className="text-contrast">Как</span> заказать?
+          <span className="text-contrast">
+            {i18n[language].instruction.title.firstPart}
+          </span>{" "}
+          {i18n[language].instruction.title.secondPart}
         </h2>
         <p
           ref={ref}
           className={`text-secondary-font text-center max-w-160 text-xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.1s" }}
         >
-          Всё проще, чем вы думаете: короткая инструкция для тех, кто ценит своё
-          время
+          {i18n[language].instruction.subtitle}
         </p>
       </div>
-      <div
-        ref={ref}
-        className={`w-[90%] h-30 rounded-full blur-[100px] bg-white/5 absolute top-115 opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
-      ></div>
       <Instruction />
     </div>
   );

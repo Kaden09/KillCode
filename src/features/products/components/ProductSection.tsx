@@ -1,12 +1,14 @@
 import { useInView } from "react-intersection-observer";
-import { data } from "./data";
+import { useData } from "./data";
 import ProductItemsList from "./ProductItemsList";
 
 function ProductSection() {
+  const { data } = useData();
   const { ref, inView } = useInView({
     threshold: 0.1,
-    triggerOnce: true, // Срабатывает только один раз
+    triggerOnce: true,
   });
+
   return (
     <div className="flex items-center justify-center w-full relative">
       <div
@@ -21,10 +23,6 @@ function ProductSection() {
         <div className="w-40 h-full bg-linear-to-r from-[#141414] to-transparent z-99 absolute left-0"></div>
         <div className="w-40 h-full bg-linear-to-l from-[#141414] to-transparent z-99 absolute right-0"></div>
       </div>
-      <div
-        ref={ref}
-        className={`absolute w-[80%] h-10 rounded-full bg-white/10 blur-[70px] opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
-      ></div>
     </div>
   );
 }

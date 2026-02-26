@@ -1,8 +1,11 @@
 import { Logo } from "@/shared";
 import FooterContactsList from "./FooterContactsList";
 import { useInView } from "react-intersection-observer";
+import { useContext } from "react";
+import { I18nContext } from "@/shared/context/i18n-context";
 
 function Footer() {
+  const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true, // Срабатывает только один раз
@@ -15,7 +18,7 @@ function Footer() {
         className={`opacity-0 ${inView && "animate-fade-in-top"}`}
         style={{ animationDelay: "0.1s" }}
       >
-        Помогаем масштабировать ваш бизнес - быстро и безопасно
+        {i18n[language].footer.slogan}
       </h3>
       <FooterContactsList />
     </footer>

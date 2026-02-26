@@ -1,34 +1,32 @@
 import { CircleDollarSign, Shield, Zap } from "lucide-react";
 import type { IAdvantageItem } from "./AdvantageItem";
 import AdvantageItem from "./AdvantageItem";
-import { useInView } from "react-intersection-observer";
-
-const data: IAdvantageItem[] = [
-  {
-    icon: <Zap width={40} height={40} strokeWidth={1} />,
-    title: "Скорость",
-    description:
-      "Мы не затягиваем с разработкой - первые результаты видны уже на старте.  Сдаём в срок, даже когда задача сложнее, чем казалось.",
-  },
-  {
-    icon: <Shield width={40} height={40} strokeWidth={1} />,
-    title: "Безопасность",
-    description:
-      "Не идём на компромиссы - каждый проект проходит многоуровневую проверку. Безопасность закладываем в основу, а не добавляем в конце.",
-  },
-  {
-    icon: <CircleDollarSign width={40} height={40} strokeWidth={1} />,
-    title: "Ценообразование",
-    description:
-      "Предлагаем решения под любой бюджет без потери качества. Платите за результат, а не за часы работы команды.",
-  },
-];
+import { useContext, useMemo } from "react";
+import { I18nContext } from "@/shared/context/i18n-context";
 
 function AdvantageItemsList() {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true, // Срабатывает только один раз
-  });
+  const { language, i18n } = useContext(I18nContext);
+
+  const data: IAdvantageItem[] = useMemo(
+    () => [
+      {
+        icon: <Zap width={40} height={40} strokeWidth={1} />,
+        title: i18n[language].advantages.cards.firstCard.title,
+        description: i18n[language].advantages.cards.firstCard.description,
+      },
+      {
+        icon: <Shield width={40} height={40} strokeWidth={1} />,
+        title: i18n[language].advantages.cards.secondCard.title,
+        description: i18n[language].advantages.cards.secondCard.description,
+      },
+      {
+        icon: <CircleDollarSign width={40} height={40} strokeWidth={1} />,
+        title: i18n[language].advantages.cards.tertiaryCard.title,
+        description: i18n[language].advantages.cards.tertiaryCard.description,
+      },
+    ],
+    [language, i18n],
+  );
 
   return (
     <div className="relative w-full flex items-center justify-center gap-10">
@@ -41,10 +39,6 @@ function AdvantageItemsList() {
           style={{ animationDelay: `${index * 0.1}s` }}
         />
       ))}
-      <div
-        ref={ref}
-        className={`absolute top-[20%] w-[60%] blur-[100px] h-40 rounded-full bg-white/5 opcity-0 ${inView && "animate-fade-in-bottom-100"}`}
-      ></div>
     </div>
   );
 }

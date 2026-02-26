@@ -1,10 +1,14 @@
+import { I18nContext } from "@/shared/context/i18n-context";
+import { useContext } from "react";
 import { useInView } from "react-intersection-observer";
 
 function Instruction() {
+  const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true, // Срабатывает только один раз
   });
+
   return (
     <div ref={ref} className="relative w-full max-w-500">
       <svg
@@ -116,20 +120,20 @@ function Instruction() {
         className={`absolute -left-[2%] top-[46%] -rotate-20 inline-block bg-secondary-bg rounded-full py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
         style={{ animationDelay: "1.2s" }}
       >
-        <h3>Сейчас вы здесь</h3>
+        <h3>{i18n[language].instruction.currentStep}</h3>
       </div>
       <div className="absolute bottom-0 -left-[0.7%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.2s" }}
         >
-          Составление ТЗ
+          {i18n[language].instruction.steps.firstStep.title}
         </h2>
         <p
           className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.3s" }}
         >
-          Поможем составить и подобрать референсы под ваш проект
+          {i18n[language].instruction.steps.firstStep.description}
         </p>
       </div>
       <div className="absolute -top-12 left-[19%] flex flex-col gap-2 items-center justify-center w-90">
@@ -137,13 +141,13 @@ function Instruction() {
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.4s" }}
         >
-          Оплата
+          {i18n[language].instruction.steps.secondStep.title}
         </h2>
         <p
           className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.5s" }}
         >
-          Принимаем предоплату 50% перед началом работы
+          {i18n[language].instruction.steps.secondStep.description}
         </p>
       </div>
       <div className="absolute bottom-14 left-[35.5%] flex flex-col gap-2 items-center justify-center w-90">
@@ -151,13 +155,13 @@ function Instruction() {
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.6s" }}
         >
-          Промежуточный результат
+          {i18n[language].instruction.steps.tertiaryStep.title}
         </h2>
         <p
           className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.7s" }}
         >
-          Вы оцените результат и если нужно дадите правки
+          {i18n[language].instruction.steps.tertiaryStep.description}
         </p>
       </div>
       <div className="absolute top-5 right-[24%] flex flex-col gap-2 items-center justify-center w-90">
@@ -165,13 +169,13 @@ function Instruction() {
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.8s" }}
         >
-          Вносим правки
+          {i18n[language].instruction.steps.fourthStep.title}
         </h2>
         <p
           className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.9s" }}
         >
-          Доводим результат до идеала
+          {i18n[language].instruction.steps.fourthStep.description}
         </p>
       </div>
       <div className="absolute bottom-6 right-[2%] flex flex-col gap-2 items-center justify-center w-90">
@@ -179,13 +183,13 @@ function Instruction() {
           className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1s" }}
         >
-          Готовая работа
+          {i18n[language].instruction.steps.fifthStep.title}
         </h2>
         <p
           className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1.1s" }}
         >
-          Продукт полностью готовый к использованию
+          {i18n[language].instruction.steps.fifthStep.description}
         </p>
       </div>
     </div>

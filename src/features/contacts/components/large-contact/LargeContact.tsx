@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from "react";
-interface ILargeContact extends HTMLAttributes<HTMLAnchorElement> {
+export interface ILargeContact extends HTMLAttributes<HTMLAnchorElement> {
   icon: React.ReactNode;
   title: string;
   value: string;

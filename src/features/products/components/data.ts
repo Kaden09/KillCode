@@ -1,3 +1,4 @@
+import { I18nContext } from "@/shared/context/i18n-context";
 import {
   AppWindow,
   BookCheck,
@@ -11,94 +12,47 @@ import {
   Globe,
   ShieldCheck,
 } from "lucide-react";
+import { useContext, useMemo } from "react";
 
-export const data = [
-  {
-    Icon: Bot,
-    title: "Боты",
-  },
-  {
-    Icon: Globe,
-    title: "Сайты",
-  },
-  {
-    Icon: FileTerminal,
-    title: "Скрипты",
-  },
-  {
-    Icon: BrainCog,
-    title: "Автоматизация",
-  },
-  {
-    Icon: BrainCircuit,
-    title: "AI Боты",
-  },
-  {
-    Icon: ChartGantt,
-    title: "Лендинги",
-  },
-  {
-    Icon: ShieldCheck,
-    title: "VPN",
-  },
-  {
-    Icon: BookCheck,
-    title: "Парсеры",
-  },
-  {
-    Icon: ChartPie,
-    title: "CRM Системы",
-  },
-  {
-    Icon: AppWindow,
-    title: "Приложения",
-  },
-  {
-    Icon: BotMessageSquare,
-    title: "Сигнальные боты",
-  },
-  {
-    Icon: Bot,
-    title: "Боты",
-  },
-  {
-    Icon: Globe,
-    title: "Сайты",
-  },
-  {
-    Icon: FileTerminal,
-    title: "Скрипты",
-  },
-  {
-    Icon: BrainCog,
-    title: "Автоматизация",
-  },
-  {
-    Icon: BrainCircuit,
-    title: "AI Боты",
-  },
-  {
-    Icon: ChartGantt,
-    title: "Лендинги",
-  },
-  {
-    Icon: ShieldCheck,
-    title: "VPN",
-  },
-  {
-    Icon: BookCheck,
-    title: "Парсеры",
-  },
-  {
-    Icon: ChartPie,
-    title: "CRM Системы",
-  },
-  {
-    Icon: AppWindow,
-    title: "Приложения",
-  },
-  {
-    Icon: BotMessageSquare,
-    title: "Сигнальные боты",
-  },
+const icons = [
+  Bot,
+  Globe,
+  FileTerminal,
+  BrainCog,
+  BrainCircuit,
+  ChartGantt,
+  ShieldCheck,
+  BookCheck,
+  ChartPie,
+  AppWindow,
+  BotMessageSquare,
+  Bot,
+  Globe,
+  FileTerminal,
+  BrainCog,
+  BrainCircuit,
+  ChartGantt,
+  ShieldCheck,
+  BookCheck,
+  ChartPie,
+  AppWindow,
+  BotMessageSquare,
 ];
+
+export function useData() {
+  const { language, i18n } = useContext(I18nContext);
+
+  const data = useMemo(() => {
+    if (!i18n[language]?.products) {
+      console.warn("Products translations not found for language:", language);
+      return [];
+    }
+
+    return icons.map((Icon, index) => ({
+      Icon,
+      title: i18n[language].products[index],
+    }));
+  }, [language, i18n]);
+
+  return { data };
+}
