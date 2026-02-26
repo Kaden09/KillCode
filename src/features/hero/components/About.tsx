@@ -76,7 +76,7 @@ function About() {
       </p>
       <div className="flex gap-3 z-99 mt-7">
         <a
-          href="#"
+          href="#contacts"
           className="flex items-center justify-center bg-secondary-bg border border-border rounded-full py-3 px-7 text-xl font-medium hover:bg-secondary-bg-hover duration-150 opacity-0 animate-fade-in-right"
           style={{ animationDelay: "0.1s" }}
         >
@@ -90,6 +90,10 @@ function About() {
           Портфолио
         </a>
       </div>
+      <div
+        className="bg-white/10 w-50 h-50 rounded-full absolute blur-[100px] opacity-0 animate-fade-in-right"
+        style={{ animationDelay: "0.3s" }}
+      ></div>
     </div>
   );
 }

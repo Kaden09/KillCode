@@ -10,7 +10,7 @@ function InstructionSection() {
   return (
     <div
       id="instruction"
-      className="flex flex-col justify-center items-center gap-30 py-10 w-full"
+      className="relative flex flex-col justify-center items-center gap-30 py-10 w-full"
     >
       <div className="flex flex-col gap-6">
         <h2
@@ -29,6 +29,10 @@ function InstructionSection() {
           время
         </p>
       </div>
+      <div
+        ref={ref}
+        className={`w-[90%] h-30 rounded-full blur-[100px] bg-white/5 absolute top-115 opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+      ></div>
       <Instruction />
     </div>
   );

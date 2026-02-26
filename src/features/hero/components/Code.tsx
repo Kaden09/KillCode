@@ -86,8 +86,8 @@ function Code() {
   };
 
   return (
-    <div className="relative w-[49%] opacity-0 animate-fade-in-right">
-      <div className="bg-secondary-bg rounded-[44px] pt-5 pl-9 pb-2 pr-30 min-h-172 border border-border rounded-r-none border-r-0 relative">
+    <div className="relative w-[49%] opacity-0 animate-fade-in-right z-99">
+      <div className="bg-code-bg rounded-[44px] pt-5 pl-9 pb-2 pr-30 min-h-172 border border-border rounded-r-none border-r-0 relative">
         <div className="flex items-center">
           <div className="flex gap-3">
             <div className="w-3 h-3 bg-contrast rounded-full opacity-0 animate-fade-in-bottom-1s"></div>

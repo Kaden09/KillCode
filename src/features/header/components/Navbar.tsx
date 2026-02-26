@@ -10,6 +10,7 @@ function Navbar() {
           Преимущества
         </a>
         <a
+          href="#instruction"
           className="cursor-pointer hover:text-secondary-font duration-100 opacity-0 animate-fade-in-bottom-1s"
           style={{ animationDelay: "0.2s" }}
         >

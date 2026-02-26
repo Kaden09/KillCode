@@ -16,7 +16,7 @@ function AdvantageItem({ icon, title, description, ...props }: IAdvantageItem) {
   return (
     <div
       ref={ref}
-      className={`relative w-full max-w-170 h-full opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+      className={`relative w-full max-w-170 h-full opacity-0 z-99 ${inView && "animate-fade-in-bottom-100"}`}
       {...props}
     >
       <div className="flex flex-col bg-secondary-bg h-full rounded-4xl border border-border p-8 pt-6 relative z-99 hover:translate-x-0.5 hover:-translate-y-px duration-200">

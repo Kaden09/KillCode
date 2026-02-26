@@ -1,6 +1,7 @@
 import { CircleDollarSign, Shield, Zap } from "lucide-react";
 import type { IAdvantageItem } from "./AdvantageItem";
 import AdvantageItem from "./AdvantageItem";
+import { useInView } from "react-intersection-observer";
 
 const data: IAdvantageItem[] = [
   {
@@ -24,8 +25,13 @@ const data: IAdvantageItem[] = [
 ];
 
 function AdvantageItemsList() {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true, // Срабатывает только один раз
+  });
+
   return (
-    <div className="w-full flex items-center justify-center gap-10">
+    <div className="relative w-full flex items-center justify-center gap-10">
       {data.map((item, index) => (
         <AdvantageItem
           key={item.title}
@@ -35,6 +41,10 @@ function AdvantageItemsList() {
           style={{ animationDelay: `${index * 0.1}s` }}
         />
       ))}
+      <div
+        ref={ref}
+        className={`absolute top-[20%] w-[60%] blur-[100px] h-40 rounded-full bg-white/5 opcity-0 ${inView && "animate-fade-in-bottom-100"}`}
+      ></div>
     </div>
   );
 }

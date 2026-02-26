@@ -8,14 +8,23 @@ function ProductSection() {
     triggerOnce: true, // Срабатывает только один раз
   });
   return (
-    <div
-      ref={ref}
-      className={`flex flex-col items-center relative w-full max-w-500 min-h-32 overflow-hidden opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
-    >
-      <ProductItemsList data={data} className="animate-carousel-left" />
-      <ProductItemsList data={data} className="top-17 animate-carousel-right" />
-      <div className="w-40 h-full bg-linear-to-r from-[#141414] to-transparent z-99 absolute left-0"></div>
-      <div className="w-40 h-full bg-linear-to-l from-[#141414] to-transparent z-99 absolute right-0"></div>
+    <div className="flex items-center justify-center w-full relative">
+      <div
+        ref={ref}
+        className={`flex flex-col items-center relative w-full max-w-500 overflow-x-hidden min-h-32 opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+      >
+        <ProductItemsList data={data} className="animate-carousel-left" />
+        <ProductItemsList
+          data={data}
+          className="top-17 animate-carousel-right"
+        />
+        <div className="w-40 h-full bg-linear-to-r from-[#141414] to-transparent z-99 absolute left-0"></div>
+        <div className="w-40 h-full bg-linear-to-l from-[#141414] to-transparent z-99 absolute right-0"></div>
+      </div>
+      <div
+        ref={ref}
+        className={`absolute w-[80%] h-10 rounded-full bg-white/10 blur-[70px] opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+      ></div>
     </div>
   );
 }
