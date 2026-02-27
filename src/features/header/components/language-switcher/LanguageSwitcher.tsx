@@ -1,18 +1,25 @@
 import { ChevronDown, Languages } from "lucide-react";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import LanguageSwitcherModal from "./LanguageSwitcherModal";
 import { I18nContext, type Language } from "@/shared/context/i18n-context";
+import { useClickOutside } from "@/shared/hooks/useClickOutside";
 
 function LanguageSwitcher() {
   const [modalOpen, setModalOpen] = useState(false);
   const { language, setLanguage } = useContext(I18nContext);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleLanguage = (value: Language) => {
     setLanguage(value);
   };
 
+  useClickOutside(menuRef, () => {
+    setModalOpen(false);
+  });
+
   return (
     <div
+      ref={menuRef}
       className="relative opacity-0 animate-fade-in-bottom-1s z-999"
       style={{ animationDelay: "0.3s" }}
     >

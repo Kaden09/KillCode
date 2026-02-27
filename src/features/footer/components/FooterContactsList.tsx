@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const data = [
   {
     icon: <TelegramIcon />,
-    link: "#",
+    link: "https://t.me/killcodestudio",
   },
   {
     icon: <GmailIcon />,
@@ -13,7 +13,7 @@ const data = [
   },
   {
     icon: <XIcon />,
-    link: "#",
+    link: "https://x.com/killcodestudio",
   },
 ];
 
