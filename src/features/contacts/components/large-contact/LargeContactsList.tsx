@@ -17,13 +17,13 @@ function LargeContactsList() {
         icon: <GmailIcon />,
         title: i18n[language].contacts.contactItems.firstItem.title,
         value: "studio@killcode.dev",
-        link: "#",
+        link: "https://mail.google.com/mail/?view=cm&fs=1&to=studio@killcode.dev&su=Тема письма&body=Текст письма",
       },
       {
         icon: <TelegramIcon />,
         title: i18n[language].contacts.contactItems.secondItem.title,
         value: "@killcodeteam",
-        link: "#",
+        link: "t.me/killcodestudio",
       },
       {
         icon: <XIcon />,

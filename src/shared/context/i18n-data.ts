@@ -125,6 +125,8 @@ export const i18n: I18nContextType["i18n"] = {
         contact: "Контакт",
         message: "Описание проекта...",
         send: "Отправить",
+        loading: "Загрузка...",
+        sent: "Отправлено",
       },
       contactItems: {
         firstItem: {
@@ -135,6 +137,19 @@ export const i18n: I18nContextType["i18n"] = {
         },
         tertiaryItem: {
           title: "Наш Twitter",
+        },
+      },
+      errorMessages: {
+        name: {
+          error: "Введите ваше имя",
+        },
+        contact: {
+          firstError: "Введите ваш контакт",
+          secondError: "Минимальная длина контакта 2 символа",
+        },
+        message: {
+          firstError: "Введите ваше сообщение",
+          secondError: "Минимальная длина сообщения 5 символов",
         },
       },
     },
@@ -268,6 +283,8 @@ export const i18n: I18nContextType["i18n"] = {
         contact: "Contact",
         message: "Project description...",
         send: "Submit",
+        loading: "Loading...",
+        sent: "Submitted",
       },
       contactItems: {
         firstItem: {
@@ -278,6 +295,19 @@ export const i18n: I18nContextType["i18n"] = {
         },
         tertiaryItem: {
           title: "Our Twitter",
+        },
+      },
+      errorMessages: {
+        name: {
+          error: "Enter your name",
+        },
+        contact: {
+          firstError: "Enter your contact",
+          secondError: "The minimum contact length is 2 characters",
+        },
+        message: {
+          firstError: "Enter your message",
+          secondError: "The minimum message length is 5 characters",
         },
       },
     },

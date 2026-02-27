@@ -18,6 +18,7 @@ function LargeContact({
   return (
     <a
       href={link}
+      target="_blank"
       className={`flex items-center w-full gap-3 bg-linear-to-r from-secondary-bg to-[#222222] py-5 px-5 border border-border rounded-3xl hover:border-contrast duration-300 ${className}`}
       {...props}
     >

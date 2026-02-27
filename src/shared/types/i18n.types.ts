@@ -92,6 +92,8 @@ export interface I18nSchema {
       contact: string;
       message: string;
       send: string;
+      loading: string;
+      sent: string;
     };
     contactItems: {
       firstItem: {
@@ -102,6 +104,19 @@ export interface I18nSchema {
       };
       tertiaryItem: {
         title: string;
+      };
+    };
+    errorMessages: {
+      name: {
+        error: string;
+      };
+      contact: {
+        firstError: string;
+        secondError: string;
+      };
+      message: {
+        firstError: string;
+        secondError: string;
       };
     };
   };
