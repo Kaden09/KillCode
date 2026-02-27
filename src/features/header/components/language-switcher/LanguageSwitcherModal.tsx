@@ -1,8 +1,8 @@
 import { useContext, type Dispatch, type SetStateAction } from "react";
-import { I18nContext } from "@/shared/context/i18n-context";
+import { I18nContext, type Language } from "@/shared/context/i18n-context";
 
 interface ILanguageSwitcherModal {
-  toggleLanguage: (language: string) => void;
+  toggleLanguage: (language: Language) => void;
   setModalOpen: Dispatch<SetStateAction<boolean>>;
   className?: string;
 }

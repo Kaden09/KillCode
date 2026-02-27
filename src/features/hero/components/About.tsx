@@ -1,6 +1,7 @@
 import { AboutBackgroundGrid } from "@/shared/assets";
 import { I18nContext } from "@/shared/context/i18n-context";
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router";
 
 function About() {
   const [displayedText, setDisplayedText] = useState("");
@@ -89,13 +90,13 @@ function About() {
         >
           {i18n[language].hero.about.contactsButton}
         </a>
-        <a
-          href="#"
+        <Link
+          to="/portfolio"
           className="flex items-center justify-center bg-contrast-bg rounded-full text-tertiary-font py-3 text-xl px-9 font-medium hover:bg-contrast-bg-hover duration-150 opacity-0 animate-fade-in-right"
           style={{ animationDelay: "0.2s" }}
         >
           {i18n[language].hero.about.portfolioButton}
-        </a>
+        </Link>
       </div>
     </div>
   );

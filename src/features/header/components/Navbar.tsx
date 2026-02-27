@@ -1,5 +1,6 @@
 import { I18nContext } from "@/shared/context/i18n-context";
 import { useContext } from "react";
+import { Link } from "react-router";
 
 function Navbar() {
   const { language, i18n } = useContext(I18nContext);
@@ -28,12 +29,13 @@ function Navbar() {
         >
           {i18n[language].header.navigation.contacts}
         </a>
-        <a
+        <Link
+          to="/portfolio"
           className="cursor-pointer hover:text-secondary-font duration-100 opacity-0 animate-fade-in-bottom-1s"
           style={{ animationDelay: "0.4s" }}
         >
           {i18n[language].header.navigation.portfolio}
-        </a>
+        </Link>
       </ul>
     </nav>
   );

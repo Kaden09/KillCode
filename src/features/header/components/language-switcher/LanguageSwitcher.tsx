@@ -1,14 +1,14 @@
 import { ChevronDown, Languages } from "lucide-react";
 import { useContext, useState } from "react";
 import LanguageSwitcherModal from "./LanguageSwitcherModal";
-import { I18nContext } from "@/shared/context/i18n-context";
+import { I18nContext, type Language } from "@/shared/context/i18n-context";
 
 function LanguageSwitcher() {
   const [modalOpen, setModalOpen] = useState(false);
   const { language, setLanguage } = useContext(I18nContext);
 
-  const toggleLanguage = () => {
-    setLanguage(language === "en" ? "ru" : "en");
+  const toggleLanguage = (value: Language) => {
+    setLanguage(value);
   };
 
   return (

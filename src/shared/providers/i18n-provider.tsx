@@ -7,9 +7,13 @@ interface I18nProviderProps {
 }
 
 export const I18nProvider = ({ children }: I18nProviderProps) => {
+  const currentLanguage = localStorage.getItem("language") as Language;
+
   const [language, setLanguage] = useState<Language>(
-    (navigator.language.slice(0, 2) as Language) || "EN",
+    currentLanguage || (navigator.language.slice(0, 2) as Language) || "EN",
   );
+
+  localStorage.setItem("language", language);
 
   const value = {
     language,
