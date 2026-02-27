@@ -25,6 +25,7 @@ export interface I18nSchema {
     };
   };
   products: string[];
+  products2: string[];
   advantages: {
     title: {
       firstPart: string;

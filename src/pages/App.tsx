@@ -5,7 +5,7 @@ import { ContactsSection } from "@/features/contacts-section";
 import { AdvantagesSection } from "@/features/adventages";
 import { HeroSection } from "@/features/hero";
 import InstructionSection from "@/features/instruction/components/InstructionSection";
-// import { TechnologySection } from "@/features/technology";
+import { TechnologySection } from "@/features/technology";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <ProductSection />
       <AdvantagesSection />
       <InstructionSection />
-      {/* <TechnologySection /> */}
+      <TechnologySection />
       <ContactsSection />
       <Footer />
     </div>
