@@ -5,14 +5,15 @@ function PortfolioItemsList() {
   const { data } = useData();
 
   return (
-    <div className="flex flex-col gap-5">
-      {data.map((item) => (
+    <div className="grid grid-cols-2 gap-5">
+      {data.reverse().map((item, index) => (
         <PortfolioItem
           img={item.img}
           title={item.title}
           desc={item.desc}
           cost={item.cost}
           technology={item.technology}
+          style={{ animationDelay: `${index * 0.1}s` }}
         />
       ))}
     </div>

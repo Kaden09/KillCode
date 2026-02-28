@@ -12,10 +12,13 @@ function Footer() {
   });
 
   return (
-    <footer ref={ref} className="flex items-center justify-between py-4 w-full">
+    <footer
+      ref={ref}
+      className="flex flex-col gap-6 lg:flex-row items-center justify-between py-4 w-full"
+    >
       <Logo className={`opacity-0 ${inView && "animate-fade-in-top"}`} />
       <h3
-        className={`opacity-0 ${inView && "animate-fade-in-top"}`}
+        className={`opacity-0 text-center text-sm md:text-base ${inView && "animate-fade-in-top"}`}
         style={{ animationDelay: "0.1s" }}
       >
         {i18n[language].footer.slogan}

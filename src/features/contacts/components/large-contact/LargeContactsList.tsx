@@ -36,7 +36,7 @@ function LargeContactsList() {
   );
 
   return (
-    <div ref={ref} className="flex gap-3">
+    <div ref={ref} className="flex flex-col lg:flex-row gap-3">
       {data.map((item, index) => (
         <LargeContact
           key={item.title}

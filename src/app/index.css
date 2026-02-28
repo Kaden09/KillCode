@@ -30,9 +30,12 @@
   --animate-fade-in-code: fadeInCode 1s ease, fadeInCode2 2s ease;
   --animate-fade-in-code-2: fadeInCode2 5s ease;
   --animate-carousel-left: carouselLeft 45s linear infinite;
+  --animate-carousel-left-2: carouselLeft2 45s linear infinite;
   --animate-carousel-right: carouselRight 30s linear infinite;
-  --animate-technology-glide: technologyGlide 10s linear infinite;
-  --animate-technology-glide2: technologyGlide2 1s linear infinite;
+  --animate-carousel-right-2: carouselRight2 30s linear infinite;
+  --animate-technology-glide: technologyGlide 30s linear infinite;
+  --animate-technology-glide2: technologyGlide2 2s ease-in-out infinite;
+  --animate-technology-glide3: technologyGlide3 1s linear infinite;
   --animate-draw-line:
     drawLine 2s linear infinite forwards, fadeInBottomLine 0.6s ease forwards;
   --animate-draw-red-line:
@@ -142,11 +145,20 @@
   2% {
     transform: translateX(20px) scale(1);
   }
-  50% {
-    transform: translateX(1000px);
+  100% {
+    transform: translateX(5000px);
+  }
+}
+
+@keyframes technologyGlide3 {
+  0% {
+    transform: translateX(0) scale(0);
+  }
+  2% {
+    transform: translateX(20px) scale(1);
   }
   100% {
-    transform: translateX(2000px);
+    transform: translateX(10000px);
   }
 }
 
@@ -164,7 +176,16 @@
 
 @keyframes carouselLeft {
   0% {
-    left: -2401px;
+    left: -140%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes carouselLeft2 {
+  0% {
+    left: -2027px;
   }
   100% {
     left: 0;
@@ -173,7 +194,16 @@
 
 @keyframes carouselRight {
   0% {
-    right: -2684px;
+    right: -140%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes carouselRight2 {
+  0% {
+    right: -2278px;
   }
   100% {
     right: 0;
@@ -209,7 +239,6 @@ html {
 body {
   width: 100%;
   height: 100svh;
-  padding-inline: 78px;
   background-color: #141414;
   font-family: "IBM Plex Mono", monospace;
   color: white;

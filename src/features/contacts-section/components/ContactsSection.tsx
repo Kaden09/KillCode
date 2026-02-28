@@ -13,12 +13,18 @@ function ContactsSection() {
   });
 
   return (
-    <div id="contacts" className="flex flex-col gap-10 w-full py-50">
-      <div className="flex items-center gap-15 min-h-115">
-        <div ref={ref} className="flex flex-col gap-15 max-w-[50%]">
-          <div className="flex flex-col gap-6">
+    <div
+      id="contacts"
+      className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full py-30 sm:py-40 md:py-50"
+    >
+      <div className="flex flex-col lg:flex-row items-center gap-11 sm:gap-13 md:gap-15 min-h-115">
+        <div
+          ref={ref}
+          className="flex flex-col items-center md:items-start gap-5 sm:gap-8 md:gap-12 lg:gap-15 w-full lg:max-w-[50%]"
+        >
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             <h2
-              className={`font-bold text-6xl opacity-0 ${inView && "animate-fade-in-top"}`}
+              className={`font-bold text-3xl text-center md:text-start sm:text-4xl md:text-5xl lg:text-6xl opacity-0 ${inView && "animate-fade-in-top"}`}
             >
               {i18n[language].contacts.title.firstPart}{" "}
               <span className="text-contrast">
@@ -27,7 +33,7 @@ function ContactsSection() {
             </h2>
             <p
               ref={ref}
-              className={`text-secondary-font max-w-280 leading-7 text-xl opacity-0 ${inView && "animate-fade-in-top"}`}
+              className={`text-secondary-font max-w-280 leading-7 text-center md:text-start text-sm sm:text-base md:text-lg lg:text-xl opacity-0 ${inView && "animate-fade-in-top"}`}
               style={{ animationDelay: "0.1s" }}
             >
               {i18n[language].contacts.description}

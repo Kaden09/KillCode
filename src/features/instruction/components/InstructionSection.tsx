@@ -15,10 +15,10 @@ function InstructionSection() {
       id="instruction"
       className="relative flex flex-col justify-center items-center gap-30 py-10 w-full"
     >
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4 sm:gap-5 md:gap-6">
         <h2
           ref={ref}
-          className={`text-6xl text-center font-semibold opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-semibold opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "" }}
         >
           <span className="text-contrast">
@@ -28,7 +28,7 @@ function InstructionSection() {
         </h2>
         <p
           ref={ref}
-          className={`text-secondary-font text-center max-w-160 text-xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-center max-w-160 text-sm sm:text-base md:text-lg lg:text-xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.1s" }}
         >
           {i18n[language].instruction.subtitle}

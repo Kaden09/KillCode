@@ -117,34 +117,34 @@ function Instruction() {
         />
       </svg>
       <div
-        className={`absolute -left-[2%] top-[46%] -rotate-20 inline-block bg-secondary-bg rounded-full py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
+        className={`absolute -left-[2%] top-[46%] -rotate-20 inline-block text-[8px] sm:text-sm md:text-base bg-secondary-bg rounded-full p-.5 md:py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
         style={{ animationDelay: "1.2s" }}
       >
         <h3>{i18n[language].instruction.currentStep}</h3>
       </div>
-      <div className="absolute bottom-0 -left-[0.7%] flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute bottom-0 min-[400px]:-left-34 min-[600px]:-left-32 min-[800px]:-left-26 min-[1000px]:-left-23 min-[1300px]:-left-18 min-[1500px]:-left-15 min-[1700px]:-left-12 min-[1800px]:-left-9 flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.2s" }}
         >
           {i18n[language].instruction.steps.firstStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.3s" }}
         >
           {i18n[language].instruction.steps.firstStep.description}
         </p>
       </div>
-      <div className="absolute -top-12 left-[19%] flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute -top-12 min-[400px]:-left-34 min-[600px]:left-0 min-[800px]:left-10 min-[1000px]:left-18 min-[1300px]:left-47 min-[1500px]:left-55 min-[1700px]:left-63 min-[1800px]:left-76 flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.4s" }}
         >
           {i18n[language].instruction.steps.secondStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.5s" }}
         >
           {i18n[language].instruction.steps.secondStep.description}
@@ -152,13 +152,13 @@ function Instruction() {
       </div>
       <div className="absolute bottom-14 left-[35.5%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.6s" }}
         >
           {i18n[language].instruction.steps.tertiaryStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.7s" }}
         >
           {i18n[language].instruction.steps.tertiaryStep.description}
@@ -166,13 +166,13 @@ function Instruction() {
       </div>
       <div className="absolute top-5 right-[24%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.8s" }}
         >
           {i18n[language].instruction.steps.fourthStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.9s" }}
         >
           {i18n[language].instruction.steps.fourthStep.description}
@@ -180,13 +180,13 @@ function Instruction() {
       </div>
       <div className="absolute bottom-6 right-[2%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1s" }}
         >
           {i18n[language].instruction.steps.fifthStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1.1s" }}
         >
           {i18n[language].instruction.steps.fifthStep.description}

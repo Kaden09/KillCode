@@ -10,9 +10,9 @@ export interface IProductItem {
 
 function ProductItem({ Icon, title }: IProductItem) {
   return (
-    <div className="flex items-center justify-center gap-5 rounded-full bg-secondary-bg border border-border py-3 px-8 w-full">
+    <div className="flex items-center justify-center gap-3 sm:gap-5 rounded-full bg-secondary-bg border border-border py-2 sm:py-3 px-6 sm:px-8 w-full">
       <Icon className="text-contrast" />
-      <h2 className="whitespace-nowrap text-lg">{title}</h2>
+      <h2 className="whitespace-nowrap text-base sm:text-lg">{title}</h2>
     </div>
   );
 }

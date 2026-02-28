@@ -65,16 +65,16 @@ function ContactsForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       ref={ref}
-      className="flex flex-col gap-3 bg-secondary-bg p-4 rounded-3xl border border-border w-full h-full opacity-0 animate-fade-in-bottom-1s"
+      className="flex flex-col gap-1 sm:gap-3 bg-secondary-bg p-2 sm:p-3 md:p-4 rounded-xl sm:rounded-2xl md:rounded-3xl border border-border w-full h-full opacity-0 animate-fade-in-bottom-1s"
     >
-      <div className="flex gap-3">
+      <div className="flex gap-2 sm:gap-3">
         <div className="w-full flex flex-col gap-1">
           <input
             type="text"
             {...register("name")}
             required
             placeholder={i18n[language].contacts.formFields.name}
-            className={`bg-tertiary-bg rounded-2xl py-4 px-5 outline-none w-full opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
+            className={`bg-tertiary-bg text-xs sm:text-sm md:text-base rounded-lg sm:rounded-xl md:rounded-2xl py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 outline-none w-full opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
             style={{ animationDelay: "0.1s" }}
           />
           <p className="text-contrast pl-2 animate-fade-in-right">
@@ -87,7 +87,7 @@ function ContactsForm() {
             {...register("contact")}
             required
             placeholder={i18n[language].contacts.formFields.contact}
-            className={`bg-tertiary-bg rounded-2xl py-4 px-5 outline-none w-full opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
+            className={`bg-tertiary-bg text-xs sm:text-sm md:text-base rounded-lg sm:rounded-xl md:rounded-2xl py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 outline-none w-full opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
             style={{ animationDelay: "0.2s" }}
           />
           <p className="text-contrast pl-2 animate-fade-in-right">
@@ -103,7 +103,7 @@ function ContactsForm() {
           {...register("message")}
           placeholder={i18n[language].contacts.formFields.message}
           required
-          className={`bg-tertiary-bg py-4 px-5 rounded-2xl w-full h-full outline-none resize-none`}
+          className={`bg-tertiary-bg py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 rounded-lg sm:rounded-xl md:rounded-2xl text-xs sm:text-sm md:text-base w-full h-full min-h-50 outline-none resize-none`}
         ></textarea>
         <p className="text-contrast pl-2 animate-fade-in-right">
           {errors.message?.message}
@@ -112,7 +112,7 @@ function ContactsForm() {
       {error && <p className="text-contrast">{error}</p>}
       <button
         type="submit"
-        className={`bg-contrast-bg py-3 w-full text-tertiary-font font-medium text-lg rounded-2xl duration-300 opacity-0 ${loading || success ? "hover:bg-contrast-bg cursor-default" : "hover:bg-contrast-bg-hover cursor-pointer"} ${inView && "animate-fade-in-bottom-1s"}`}
+        className={`bg-contrast-bg py-2 sm:py-3 w-full text-tertiary-font font-medium text-sm sm:text-base md:text-lg rounded-lg sm:rounded-xl md:rounded-2xl duration-300 opacity-0 ${loading || success ? "hover:bg-contrast-bg cursor-default" : "hover:bg-contrast-bg-hover cursor-pointer"} ${inView && "animate-fade-in-bottom-1s"}`}
         style={{ animationDelay: "0.4s" }}
         disabled={success || loading}
       >

@@ -6,8 +6,8 @@ function Navbar() {
   const { language, i18n } = useContext(I18nContext);
 
   return (
-    <nav>
-      <ul className="flex gap-15 select-none">
+    <nav className="hidden lg:block">
+      <ul className="flex min-[950px]:gap-10 select-none">
         <a
           href="#advantages"
           className="cursor-pointer hover:text-secondary-font duration-100 opacity-0 animate-fade-in-bottom-1s"

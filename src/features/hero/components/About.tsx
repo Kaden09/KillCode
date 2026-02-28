@@ -44,24 +44,24 @@ function About() {
   };
 
   return (
-    <div className="flex flex-col gap-8 w-[50%] relative ml-10">
-      <div className="absolute -top-30 -left-10 z-0">
+    <div className="flex flex-col justify-center items-center w-full gap-2 sm:gap-4 md:gap-4 lg:w-[50%] lg:items-start relative lg:ml-10">
+      <div className="absolute min-[1024px]:-top-[25%] min-[1348px]:-top-[50%] lg:-left-10 z-0">
         <AboutBackgroundGrid />
       </div>
-      <div className="flex items-center gap-4 z-99">
-        <div className="flex -gap-2">
-          <div className="w-9 h-9 bg-neutral-700 rounded-full -mr-4 opacity-0 animate-fade-in-left"></div>
+      <div className="flex items-center gap-2 sm:gap-3 md:gap-4 z-99">
+        <div className="hidden sm:flex -gap-2">
+          <div className="w-7 sm:w-7 md:w-8 h-7 sm:h-7 md:h-8 bg-neutral-700 rounded-full -mr-4 opacity-0 animate-fade-in-left"></div>
           <div
-            className="w-9 h-9 bg-neutral-600 rounded-full -mr-4 opacity-0 animate-fade-in-left"
+            className="w-7 sm:w-7 md:w-8 h-7 sm:h-7 md:h-8 bg-neutral-600 rounded-full -mr-4 opacity-0 animate-fade-in-left"
             style={{ animationDelay: "0.1s" }}
           ></div>
           <div
-            className="w-9 h-9 bg-neutral-500 rounded-full opacity-0 animate-fade-in-left"
+            className="w-7 sm:w-7 md:w-8 h-7 sm:h-7 md:h-8 bg-neutral-500 rounded-full opacity-0 animate-fade-in-left"
             style={{ animationDelay: "0.2s" }}
           ></div>
         </div>
         <p
-          className="text-2xl opacity-0 animate-fade-in-left"
+          className="min-[1024px]:text-lg opacity-0 animate-fade-in-left"
           style={{ animationDelay: "0.2s" }}
         >
           {renderHighlightedText(displayedText)}
@@ -70,29 +70,29 @@ function About() {
           )}
         </p>
       </div>
-      <h1 className="text-6xl font-semibold z-99 mb-2 animate-fade-in-bottom-100">
+      <h1 className="text-2xl min-[400px]:text-4xl min-[600px]:text-5xl min-[1024px]:text-[32px] min-[1200px]:text-[40px] min-[1450px]:text-5xl font-semibold z-99 sm:mb-1 md:mb-2 animate-fade-in-bottom-100">
         {i18n[language].hero.about.title.firstPart}{" "}
         <span className="text-contrast">
           {i18n[language].hero.about.title.secondPart}
         </span>
       </h1>
       <p
-        className="text-secondary-font text-2xl z-99 w-[75%] leading-8 animate-fade-in-bottom-100"
+        className="text-secondary-font text-center min-[200px]:text-xs min-[350px]:text-sm min-[450px]:text-base min-[600px]:text-lg min-[1024px]:text-base min-[1500px]:text-xl lg:text-start z-99 w-[75%] leading-6 sm:leading-7 md:leading-8 animate-fade-in-bottom-100"
         style={{ animationDelay: "0.1s" }}
       >
         {i18n[language].hero.about.description}
       </p>
-      <div className="flex gap-3 z-99 mt-7">
+      <div className="flex flex-col w-full min-[300px]:w-60 min-[550px]:w-100 lg:w-fit lg:flex-row gap-3 z-99 mt-4 sm:mt-5 md:mt-7">
         <a
           href="#contacts"
-          className="flex items-center justify-center bg-secondary-bg border border-border rounded-full py-3 px-7 text-xl font-medium hover:bg-secondary-bg-hover duration-150 opacity-0 animate-fade-in-right"
+          className="flex items-center w-full justify-center bg-secondary-bg border border-border rounded-full py-3 px-9 sm:px-7 min-[200px]:text-sm min-[1024px]:text-sm min-[1200px]:text-base min-[1400px]:text-lg min-[1500px]:text-xl font-medium hover:bg-secondary-bg-hover duration-150 opacity-0 animate-fade-in-right"
           style={{ animationDelay: "0.1s" }}
         >
           {i18n[language].hero.about.contactsButton}
         </a>
         <Link
           to="/portfolio"
-          className="flex items-center justify-center bg-contrast-bg rounded-full text-tertiary-font py-3 text-xl px-9 font-medium hover:bg-contrast-bg-hover duration-150 opacity-0 animate-fade-in-right"
+          className="flex items-center justify-center bg-contrast-bg rounded-full text-tertiary-font py-3 px-9 font-medium min-[200px]:text-sm min-[1024px]:text-sm min-[1200px]:text-base min-[1400px]:text-lg min-[1500px]:text-xl hover:bg-contrast-bg-hover duration-150 opacity-0 animate-fade-in-right"
           style={{ animationDelay: "0.2s" }}
         >
           {i18n[language].hero.about.portfolioButton}

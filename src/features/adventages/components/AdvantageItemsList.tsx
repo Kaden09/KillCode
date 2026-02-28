@@ -29,7 +29,7 @@ function AdvantageItemsList() {
   );
 
   return (
-    <div className="relative w-full flex items-center justify-center gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-12 relative">
       {data.map((item, index) => (
         <AdvantageItem
           key={item.title}

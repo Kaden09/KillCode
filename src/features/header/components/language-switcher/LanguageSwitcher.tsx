@@ -25,15 +25,17 @@ function LanguageSwitcher() {
     >
       <div
         onClick={() => setModalOpen(!modalOpen)}
-        className="flex items-center bg-secondary-bg rounded-xl border border-border cursor-pointer hover:bg-secondary-bg-hover duration-100"
+        className="flex items-center bg-secondary-bg rounded-lg sm:rounded-xl border border-border cursor-pointer hover:bg-secondary-bg-hover duration-100"
       >
         <span className="px-3 border-r border-border p-2">
-          <Languages width={20} className="h-full" />
+          <Languages className="h-full w-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
         </span>
         <div className="flex items-center gap-2 px-4">
-          <h3 className="select-none font-medium">{language.toUpperCase()}</h3>
+          <h3 className="select-none font-medium text-xs sm:text-sm md:text-base">
+            {language.toUpperCase()}
+          </h3>
           <ChevronDown
-            className={`duration-150 ${modalOpen && "rotate-180"}`}
+            className={`h-full w-3 sm:w-4 sm:h-4 md:w-5 md:h-5 duration-150 ${modalOpen && "rotate-180"}`}
           />
         </div>
       </div>
@@ -41,7 +43,7 @@ function LanguageSwitcher() {
         <LanguageSwitcherModal
           toggleLanguage={toggleLanguage}
           setModalOpen={setModalOpen}
-          className="absolute top-12 right-0"
+          className="absolute top-10 sm:top-11 md:top-12 right-0"
         />
       )}
     </div>
