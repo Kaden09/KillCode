@@ -76,7 +76,7 @@ function MiniInstruction() {
           strokeDasharray={2}
           strokeDashoffset={2}
           strokeWidth={0.5}
-          className={`opacity-0 ${inView && "animate-draw-line"}`}
+          className={`opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.1s" }}
         />
         <path
@@ -85,7 +85,7 @@ function MiniInstruction() {
           strokeDasharray={2}
           strokeDashoffset={2}
           strokeWidth={0.5}
-          className={`opacity-0 ${inView && "animate-draw-line"}`}
+          className={`opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.3s" }}
         />
         <path
@@ -94,7 +94,7 @@ function MiniInstruction() {
           strokeDasharray={2}
           strokeDashoffset={2}
           strokeWidth={0.5}
-          className={`opacity-0 ${inView && "animate-draw-line"}`}
+          className={`opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.5s" }}
         />
         <path
@@ -103,7 +103,7 @@ function MiniInstruction() {
           strokeDasharray={2}
           strokeDashoffset={2}
           strokeWidth={0.5}
-          className={`opacity-0 ${inView && "animate-draw-line"}`}
+          className={`opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.7s" }}
         />
       </svg>

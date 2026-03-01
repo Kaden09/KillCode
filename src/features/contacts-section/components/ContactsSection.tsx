@@ -20,7 +20,7 @@ function ContactsSection() {
       <div className="flex flex-col lg:flex-row items-start gap-11 sm:gap-13 md:gap-15 min-h-115">
         <div
           ref={ref}
-          className="flex flex-col items-center md:items-start gap-5 sm:gap-8 md:gap-12 lg:gap-15 w-full lg:max-w-[50%]"
+          className="flex flex-col items-center md:items-start gap-5 sm:gap-8 md:gap-12 lg:gap-15 w-full lg:max-w-[40%]"
         >
           <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             <h2
@@ -33,7 +33,7 @@ function ContactsSection() {
             </h2>
             <p
               ref={ref}
-              className={`text-secondary-font max-w-280 leading-7 text-center md:text-start text-sm sm:text-base md:text-lg lg:text-xl opacity-0 ${inView && "animate-fade-in-top"}`}
+              className={`text-secondary-font max-w-180 leading-7 text-center md:text-start text-sm sm:text-base md:text-lg lg:text-xl opacity-0 ${inView && "animate-fade-in-top"}`}
               style={{ animationDelay: "0.1s" }}
             >
               {i18n[language].contacts.description}
