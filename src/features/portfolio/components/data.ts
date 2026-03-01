@@ -5,7 +5,7 @@ import firstProject from "@/shared/assets/images/firstProject.jpg";
 import secondProject from "@/shared/assets/images/secondProject.jpg";
 import thirdProject from "@/shared/assets/images/thirdProject.jpg";
 import fourthProject from "@/shared/assets/images/fourthProject.jpg";
-import fifthProject from "@/shared/assets/images/fifthProject.jpg";
+import fifthProject from "@/shared/assets/images/fifthProject.webp";
 import sixthProject from "@/shared/assets/images/sixthProject.jpg";
 import seventhProject from "@/shared/assets/images/seventhProject.png";
 import eighthProject from "@/shared/assets/images/eighthProject.jpg";

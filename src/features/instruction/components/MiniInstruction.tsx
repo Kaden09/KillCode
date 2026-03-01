@@ -6,7 +6,7 @@ function MiniInstruction() {
   const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
-    triggerOnce: true, // Срабатывает только один раз
+    triggerOnce: true,
   });
 
   return (
@@ -108,9 +108,9 @@ function MiniInstruction() {
         />
       </svg>
 
-      <div className="absolute top-[3%] min-[320px]:top-[1%] min-[375px]:top-[3%] min-[425px]:top-[4%] right-[2%] min-[320px]:right-[11%] min-[375px]:right-[20%] min-[425px]:right-[26%] min-[480px]:right-[33%] flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute top-[3%] min-[320px]:top-[1%] min-[375px]:top-[3%] min-[400px]:top-[4%] min-[525px]:top-[6%] right-[2%] min-[320px]:right-[10%] min-[340px]:right-[14%] min-[375px]:right-[20%] min-[400px]:right-[26%] min-[480px]:right-[33%] min-[525px]:right-[36%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm min-[400px]:text-base opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.2s" }}
         >
           {i18n[language].instruction.steps.firstStep.title}
@@ -123,9 +123,9 @@ function MiniInstruction() {
         </p>
       </div>
 
-      <div className="absolute top-[25%] min-[320px]:top-[25%] min-[375px]:top-[27%] min-[425px]:top-[28%] left-[5%] min-[320px]:left-[13%] min-[375px]:left-[24%] min-[425px]:left-[30%] min-[480px]:left-[38%] flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute top-[25%] min-[320px]:top-[23%] min-[340px]:top-[24%] min-[375px]:top-[25%] min-[400px]:top-[26%] min-[525px]:top-[28%] left-[5%] min-[320px]:left-[14%] min-[340px]:left-[16%] min-[375px]:left-[24%] min-[400px]:left-[30%] min-[480px]:left-[38%] min-[525px]:left-[42%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm min-[400px]:text-base opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.4s" }}
         >
           {i18n[language].instruction.steps.secondStep.title}
@@ -138,9 +138,9 @@ function MiniInstruction() {
         </p>
       </div>
 
-      <div className="absolute bottom-[50%] min-[320px]:bottom-[50%] min-[375px]:bottom-[48%] min-[425px]:bottom-[48%] right-[2%] min-[320px]:right-[10%] min-[375px]:right-[22%] min-[425px]:right-[30%] min-[480px]:right-[35%] flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute bottom-[50%] min-[320px]:bottom-[52%] min-[375px]:bottom-[50%] min-[400px]:bottom-[50%] right-[2%] min-[320px]:right-[10%] min-[340px]:right-[14%] min-[375px]:right-[22%] min-[400px]:right-[28%] min-[480px]:right-[35%] min-[525px]:right-[38%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm min-[400px]:text-base opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.6s" }}
         >
           {i18n[language].instruction.steps.tertiaryStep.title}
@@ -153,9 +153,9 @@ function MiniInstruction() {
         </p>
       </div>
 
-      <div className="absolute bottom-[31%] min-[320px]:bottom-[31%] min-[375px]:bottom-[31%] left-[8%] min-[320px]:left-[14%] min-[375px]:left-[24%] min-[425px]:left-[32%] min-[480px]:left-[38%] flex flex-col gap-1 items-center justify-center w-90">
+      <div className="absolute bottom-[31%] min-[320px]:bottom-[33%] min-[375px]:bottom-[33%] left-[8%] min-[320px]:left-[18%] min-[340px]:left-[20%] min-[375px]:left-[26%] min-[400px]:left-[32%] min-[480px]:left-[38%] min-[525px]:left-[42%] flex flex-col gap-1 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm min-[400px]:text-base opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.8s" }}
         >
           {i18n[language].instruction.steps.fourthStep.title}
@@ -168,9 +168,9 @@ function MiniInstruction() {
         </p>
       </div>
 
-      <div className="absolute bottom-[12%] min-[320px]:bottom-[12%] min-[375px]:bottom-[11%] right-[4%] min-[320px]:right-[10%] min-[375px]:right-[22%] min-[425px]:right-[29%] min-[480px]:right-[33%] flex flex-col gap-1 items-center justify-center w-90">
+      <div className="absolute bottom-[12%] min-[320px]:bottom-[15%] min-[375px]:bottom-[13%] right-[4%] min-[320px]:right-[11%] min-[340px]:right-[15%] min-[375px]:right-[22%] min-[400px]:right-[26%] min-[480px]:right-[33%] min-[525px]:right-[36%] flex flex-col gap-1 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm min-[400px]:text-base opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1s" }}
         >
           {i18n[language].instruction.steps.fifthStep.title}

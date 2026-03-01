@@ -222,7 +222,7 @@
     opacity: 0;
   }
   100% {
-    width: 100%;
+    width: 95%;
     opacity: 1;
   }
 }
