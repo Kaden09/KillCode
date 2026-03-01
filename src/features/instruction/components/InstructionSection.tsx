@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import Instruction from "./Instruction";
 import { useContext } from "react";
 import { I18nContext } from "@/shared/context/i18n-context";
+import MiniInstruction from "./MiniInstruction";
 
 function InstructionSection() {
   const { language, i18n } = useContext(I18nContext);
@@ -13,7 +14,7 @@ function InstructionSection() {
   return (
     <div
       id="instruction"
-      className="relative flex flex-col justify-center items-center gap-30 py-10 w-full"
+      className="relative flex flex-col justify-center items-center gap-15 sm:gap-20 md:gap-25 lg:gap-30 py-10 w-full"
     >
       <div className="flex flex-col gap-4 sm:gap-5 md:gap-6">
         <h2
@@ -35,6 +36,7 @@ function InstructionSection() {
         </p>
       </div>
       <Instruction />
+      <MiniInstruction />
     </div>
   );
 }

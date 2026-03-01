@@ -2,7 +2,7 @@ import { I18nContext } from "@/shared/context/i18n-context";
 import { useContext } from "react";
 import { useInView } from "react-intersection-observer";
 
-function Instruction() {
+function MiniInstruction() {
   const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -10,28 +10,25 @@ function Instruction() {
   });
 
   return (
-    <div
-      ref={ref}
-      className="relative w-full max-w-500 hidden min-[550px]:block"
-    >
+    <div ref={ref} className="relative w-full max-w-500 min-[550px]:hidden">
       <svg
-        viewBox="0 0 180 50"
+        viewBox="0 0 45 103"
         preserveAspectRatio="xMidYMid meet"
         className="w-full h-full"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx="15"
-          cy="35"
+          cx="13"
+          cy="18"
           r="3"
           fill="white"
           className={`opacity-0  ${inView && "animate-fade-in-from-small"}`}
           style={{ filter: "drop-shadow(0 0 2px rgba(255,255,255,0.5))" }}
         />
         <circle
-          cx="50"
-          cy="10"
+          cx="35"
+          cy="40"
           r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
@@ -41,8 +38,8 @@ function Instruction() {
           }}
         />
         <circle
-          cx="80"
-          cy="29"
+          cx="13"
+          cy="58"
           r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
@@ -52,8 +49,8 @@ function Instruction() {
           }}
         />
         <circle
-          cx="120"
-          cy="15"
+          cx="35"
+          cy="75"
           r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
@@ -63,8 +60,8 @@ function Instruction() {
           }}
         />
         <circle
-          cx="160"
-          cy="33"
+          cx="13"
+          cy="95"
           r="3"
           fill="white"
           className={`opacity-0 ${inView && "animate-fade-in-from-small"}`}
@@ -74,16 +71,7 @@ function Instruction() {
           }}
         />
         <path
-          d="M11 33 Q7 32 6 27"
-          stroke="#f32b24"
-          strokeDasharray={2}
-          strokeDashoffset={2}
-          strokeWidth={0.5}
-          className={`opacity-0 ${inView && "animate-draw-red-line"}`}
-          style={{ animationDelay: "1s" }}
-        />
-        <path
-          d="M17 31 C27 15 40 25 48 13.4"
+          d="M14 22 Q16 35 31 39"
           stroke="#626262"
           strokeDasharray={2}
           strokeDashoffset={2}
@@ -92,7 +80,7 @@ function Instruction() {
           style={{ animationDelay: "0.1s" }}
         />
         <path
-          d="M52 13.5 Q60 27 76 29"
+          d="M33 43 Q30 50 17 56"
           stroke="#626262"
           strokeDasharray={2}
           strokeDashoffset={2}
@@ -101,7 +89,7 @@ function Instruction() {
           style={{ animationDelay: "0.3s" }}
         />
         <path
-          d="M84 29 Q111 28 117 17.8"
+          d="M15 61 Q20 70 31 74"
           stroke="#626262"
           strokeDasharray={2}
           strokeDashoffset={2}
@@ -110,7 +98,7 @@ function Instruction() {
           style={{ animationDelay: "0.5s" }}
         />
         <path
-          d="M123 17.9 Q135 33 156 33"
+          d="M34 78.5 Q29 91 17 94"
           stroke="#626262"
           strokeDasharray={2}
           strokeDashoffset={2}
@@ -119,77 +107,76 @@ function Instruction() {
           style={{ animationDelay: "0.7s" }}
         />
       </svg>
-      <div
-        className={`absolute -left-[2%] top-[46%] -rotate-20 inline-block text-[8px] sm:text-sm md:text-base bg-secondary-bg rounded-full p-.5 md:py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
-        style={{ animationDelay: "1.2s" }}
-      >
-        <h3>{i18n[language].instruction.currentStep}</h3>
-      </div>
-      <div className="absolute bottom-0 min-[400px]:-left-34 min-[600px]:-left-32 min-[800px]:-left-26 min-[1000px]:-left-23 min-[1300px]:-left-18 min-[1500px]:-left-15 min-[1700px]:-left-12 min-[1800px]:-left-9 flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute top-[3%] min-[320px]:top-[1%] min-[375px]:top-[3%] min-[425px]:top-[4%] right-[2%] min-[320px]:right-[11%] min-[375px]:right-[20%] min-[425px]:right-[26%] min-[480px]:right-[33%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.2s" }}
         >
           {i18n[language].instruction.steps.firstStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-[10px] min-[320px]:text-xs text-sm w-50 text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.3s" }}
         >
           {i18n[language].instruction.steps.firstStep.description}
         </p>
       </div>
-      <div className="absolute -top-12 min-[400px]:-left-34 min-[600px]:left-0 min-[800px]:left-10 min-[1000px]:left-18 min-[1300px]:left-47 min-[1500px]:left-55 min-[1700px]:left-63 min-[1800px]:left-76 flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute top-[25%] min-[320px]:top-[25%] min-[375px]:top-[27%] min-[425px]:top-[28%] left-[5%] min-[320px]:left-[13%] min-[375px]:left-[24%] min-[425px]:left-[30%] min-[480px]:left-[38%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.4s" }}
         >
           {i18n[language].instruction.steps.secondStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`text-secondary-font text-[10px] min-[320px]:text-xs text-sm w-50 text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.5s" }}
         >
           {i18n[language].instruction.steps.secondStep.description}
         </p>
       </div>
-      <div className="absolute bottom-14 left-[35.5%] flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute bottom-[50%] min-[320px]:bottom-[50%] min-[375px]:bottom-[48%] min-[425px]:bottom-[48%] right-[2%] min-[320px]:right-[10%] min-[375px]:right-[22%] min-[425px]:right-[30%] min-[480px]:right-[35%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.6s" }}
         >
           {i18n[language].instruction.steps.tertiaryStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-[10px] min-[320px]:text-xs w-50 text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.7s" }}
         >
           {i18n[language].instruction.steps.tertiaryStep.description}
         </p>
       </div>
-      <div className="absolute top-5 right-[24%] flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute bottom-[31%] min-[320px]:bottom-[31%] min-[375px]:bottom-[31%] left-[8%] min-[320px]:left-[14%] min-[375px]:left-[24%] min-[425px]:left-[32%] min-[480px]:left-[38%] flex flex-col gap-1 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.8s" }}
         >
           {i18n[language].instruction.steps.fourthStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`text-secondary-font text-[10px] min-[320px]:text-xs w-40 text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.9s" }}
         >
           {i18n[language].instruction.steps.fourthStep.description}
         </p>
       </div>
-      <div className="absolute bottom-6 right-[2%] flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute bottom-[12%] min-[320px]:bottom-[12%] min-[375px]:bottom-[11%] right-[4%] min-[320px]:right-[10%] min-[375px]:right-[22%] min-[425px]:right-[29%] min-[480px]:right-[33%] flex flex-col gap-1 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold text-xs min-[320px]:text-sm opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1s" }}
         >
           {i18n[language].instruction.steps.fifthStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-[10px] min-[320px]:text-xs w-50 text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1.1s" }}
         >
           {i18n[language].instruction.steps.fifthStep.description}
@@ -199,4 +186,4 @@ function Instruction() {
   );
 }
 
-export default Instruction;
+export default MiniInstruction;

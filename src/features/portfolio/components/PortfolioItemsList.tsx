@@ -5,7 +5,7 @@ function PortfolioItemsList() {
   const { data } = useData();
 
   return (
-    <div className="grid grid-cols-2 gap-5">
+    <main className="grid grid-cols-1 lg:grid-cols-2 gap-5">
       {data.reverse().map((item, index) => (
         <PortfolioItem
           img={item.img}
@@ -16,7 +16,7 @@ function PortfolioItemsList() {
           style={{ animationDelay: `${index * 0.1}s` }}
         />
       ))}
-    </div>
+    </main>
   );
 }
 

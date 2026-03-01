@@ -30,9 +30,7 @@
   --animate-fade-in-code: fadeInCode 1s ease, fadeInCode2 2s ease;
   --animate-fade-in-code-2: fadeInCode2 5s ease;
   --animate-carousel-left: carouselLeft 45s linear infinite;
-  --animate-carousel-left-2: carouselLeft2 45s linear infinite;
   --animate-carousel-right: carouselRight 30s linear infinite;
-  --animate-carousel-right-2: carouselRight2 30s linear infinite;
   --animate-technology-glide: technologyGlide 30s linear infinite;
   --animate-technology-glide2: technologyGlide2 2s ease-in-out infinite;
   --animate-technology-glide3: technologyGlide3 1s linear infinite;
@@ -176,37 +174,19 @@
 
 @keyframes carouselLeft {
   0% {
-    left: -140%;
+    transform: translateX(0);
   }
   100% {
-    left: 0;
-  }
-}
-
-@keyframes carouselLeft2 {
-  0% {
-    left: -2027px;
-  }
-  100% {
-    left: 0;
+    transform: translateX(-100%);
   }
 }
 
 @keyframes carouselRight {
   0% {
-    right: -140%;
+    transform: translateX(-100%);
   }
   100% {
-    right: 0;
-  }
-}
-
-@keyframes carouselRight2 {
-  0% {
-    right: -2278px;
-  }
-  100% {
-    right: 0;
+    transform: translateX(0);
   }
 }
 

@@ -8,10 +8,17 @@ interface IProductItemsList {
 
 function ProductItemsList({ data, className = "" }: IProductItemsList) {
   return (
-    <div className={`absolute flex gap-5 ${className}`}>
-      {data.map((item, index) => (
-        <ProductItem key={index} Icon={item.Icon} title={item.title} />
-      ))}
+    <div className={`flex mx-auto overflow-hidden`}>
+      <div className={`flex gap-5 pr-5 ${className}`}>
+        {data.map((item, index) => (
+          <ProductItem key={index} Icon={item.Icon} title={item.title} />
+        ))}
+      </div>
+      <div aria-hidden className={`flex gap-5 pr-5 ${className}`}>
+        {data.map((item, index) => (
+          <ProductItem key={index} Icon={item.Icon} title={item.title} />
+        ))}
+      </div>
     </div>
   );
 }

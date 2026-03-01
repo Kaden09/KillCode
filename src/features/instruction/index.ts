@@ -1,1 +1,1 @@
-export { default as InstructionSectoin } from "./components/InstructionSection";
+export { default as InstructionSection } from "./components/InstructionSection";
