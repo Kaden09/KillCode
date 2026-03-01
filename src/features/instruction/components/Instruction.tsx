@@ -120,76 +120,80 @@ function Instruction() {
         />
       </svg>
       <div
-        className={`absolute -left-[2%] top-[46%] -rotate-20 inline-block text-[8px] sm:text-sm md:text-base bg-secondary-bg rounded-full p-.5 md:py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
+        className={`absolute min-[550px]:-left-[2%] min-[550px]:top-[37%] -rotate-20 inline-block min-[550px]:text-[8px] min-[1000px]:text-[10px] min-[1000px]:top-[42%] min-[1300px]:top-[47%] min-[1300px]:text-xs min-[1600px]:text-sm min-[1700px]:-left-[1%] min-[2300px]:text-base bg-secondary-bg rounded-full p-1 md:py-2 px-4 border border-contrast text-contrast opacity-0 ${inView && "animate-fade-in-top"}`}
         style={{ animationDelay: "1.2s" }}
       >
         <h3>{i18n[language].instruction.currentStep}</h3>
       </div>
-      <div className="absolute bottom-0 min-[400px]:-left-34 min-[600px]:-left-32 min-[800px]:-left-26 min-[1000px]:-left-23 min-[1300px]:-left-18 min-[1500px]:-left-15 min-[1700px]:-left-12 min-[1800px]:-left-9 flex flex-col gap-2 items-center justify-center w-90">
+      <div className="absolute min-[550px]:-bottom-[14%] min-[550px]:right-[53%] min-[600px]:right-[58%] min-[700px]:right-[63%] min-[800px]:right-[67%] min-[800px]:-bottom-[17%] min-[900px]:right-[70%] min-[1000px]:right-[72%] min-[1000px]:-bottom-[13%] min-[1100px]:right-[74%] min-[1250px]:right-[76%] min-[1250px]:-bottom-[8%] min-[1400px]:right-[78%] min-[1400px]:-bottom-[5%] min-[1600px]:right-[80%] min-[1800px]:right-[81%] min-[2300px]:right-[83%] min-[2300px]:-bottom-[2%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold min-[550px]:text-[10px] min-[800px]:text-[12px] min-[1100px]:text-base min-[1600px]:text-lg min-[1700px]:text-xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.2s" }}
         >
           {i18n[language].instruction.steps.firstStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font min-[550px]:w-40 min-[550px]:text-[8px] min-[800px]:text-[10px] min-[1100px]:text-xs min-[1100px]:w-50 min-[1600px]:text-sm min-[1600px]:w-60 min-[1700px]:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.3s" }}
         >
           {i18n[language].instruction.steps.firstStep.description}
         </p>
       </div>
-      <div className="absolute -top-12 min-[400px]:-left-34 min-[600px]:left-0 min-[800px]:left-10 min-[1000px]:left-18 min-[1300px]:left-47 min-[1500px]:left-55 min-[1700px]:left-63 min-[1800px]:left-76 flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute min-[550px]:-top-[30%] min-[550px]:right-[39%] min-[600px]:-top-[25%] min-[600px]:right-[41%] min-[700px]:right-[45%] min-[800px]:right-[48%] min-[900px]:right-[50%] min-[1000px]:right-[53%] min-[1000px]:-top-[15%] min-[1100px]:right-[54%] min-[1250px]:right-[56%] min-[1400px]:right-[58%] min-[1400px]:-top-[10%] min-[1600px]:right-[60%] min-[1800px]:right-[61%] min-[2300px]:right-[63%] min-[2300px]:-top-[7%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold min-[550px]:text-[10px] min-[800px]:text-[12px] min-[1100px]:text-base min-[1600px]:text-lg min-[1700px]:text-xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.4s" }}
         >
           {i18n[language].instruction.steps.secondStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`text-secondary-font min-[550px]:w-40 min-[550px]:text-[8px] min-[800px]:text-[10px] min-[1100px]:text-xs min-[1100px]:w-50 min-[1600px]:text-sm min-[1600px]:w-60 min-[1700px]:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.5s" }}
         >
           {i18n[language].instruction.steps.secondStep.description}
         </p>
       </div>
-      <div className="absolute bottom-14 left-[35.5%] flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute min-[550px]:top-[70%] min-[550px]:right-[22%] min-[600px]:right-[25%] min-[700px]:right-[28%] min-[800px]:right-[30%] min-[900px]:right-[33%] min-[1000px]:right-[36%] min-[1100px]:right-[37%] min-[1250px]:right-[39%] min-[1400px]:right-[41%] min-[1600px]:right-[43%] min-[1800px]:right-[45%] min-[2300px]:right-[46%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold min-[550px]:text-[10px] min-[800px]:text-[12px] min-[1100px]:text-base min-[1600px]:text-lg min-[1700px]:text-xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.6s" }}
         >
           {i18n[language].instruction.steps.tertiaryStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font min-[550px]:w-40 min-[550px]:text-[8px] min-[800px]:text-[10px] min-[1100px]:text-xs min-[1100px]:w-50 min-[1600px]:text-sm min-[1600px]:w-60 min-[1700px]:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.7s" }}
         >
           {i18n[language].instruction.steps.tertiaryStep.description}
         </p>
       </div>
-      <div className="absolute top-5 right-[24%] flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute min-[550px]:bottom-[88%] min-[550px]:left-[33%] min-[600px]:left-[36%] min-[700px]:left-[39%] min-[800px]:left-[42%] min-[900px]:left-[45%] min-[1000px]:left-[47%] min-[1100px]:left-[49%] min-[1100px]:bottom-[85%] min-[1250px]:left-[51%] min-[1400px]:left-[53%] min-[1600px]:left-[55%] min-[1800px]:left-[56%] min-[2300px]:left-[58%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`font-semibold min-[550px]:text-[10px] min-[800px]:text-[12px] min-[1100px]:text-base min-[1600px]:text-lg min-[1700px]:text-xl opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.8s" }}
         >
           {i18n[language].instruction.steps.fourthStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
+          className={`text-secondary-font min-[550px]:w-40 min-[550px]:text-[8px] min-[800px]:text-[10px] min-[1100px]:text-xs min-[1100px]:w-50 min-[1600px]:text-sm min-[1600px]:w-60 min-[1700px]:text-base text-center opacity-0 ${inView && "animate-fade-in-top"}`}
           style={{ animationDelay: "0.9s" }}
         >
           {i18n[language].instruction.steps.fourthStep.description}
         </p>
       </div>
-      <div className="absolute bottom-6 right-[2%] flex flex-col gap-2 items-center justify-center w-90">
+
+      <div className="absolute min-[550px]:top-[80%] min-[550px]:left-[55%] min-[600px]:left-[58%] min-[700px]:left-[61%] min-[800px]:left-[64%] min-[900px]:left-[67%] min-[1000px]:left-[69%] min-[1100px]:left-[71%] min-[1250px]:left-[73%] min-[1400px]:left-[75%] min-[1600px]:left-[77%] min-[1800px]:left-[78%] min-[2300px]:left-[80%] flex flex-col gap-2 items-center justify-center w-90">
         <h2
-          className={`font-semibold text-sm sm:text-lg md:text-2xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`font-semibold min-[550px]:text-[10px] min-[800px]:text-[12px] min-[1100px]:text-base min-[1600px]:text-lg min-[1700px]:text-xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1s" }}
         >
           {i18n[language].instruction.steps.fifthStep.title}
         </h2>
         <p
-          className={`text-secondary-font text-xs sm:text-sm md:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font min-[550px]:w-40 min-[550px]:text-[8px] min-[800px]:text-[10px] min-[1100px]:text-xs min-[1100px]:w-50 min-[1600px]:text-sm min-[1600px]:w-60 min-[1700px]:text-base text-center opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "1.1s" }}
         >
           {i18n[language].instruction.steps.fifthStep.description}

@@ -10,7 +10,7 @@ import sixthProject from "@/shared/assets/images/sixthProject.jpg";
 import seventhProject from "@/shared/assets/images/seventhProject.png";
 import eighthProject from "@/shared/assets/images/eighthProject.jpg";
 import ninthProject from "@/shared/assets/images/ninthProject.jpg";
-import tenthProject from "@/shared/assets/images/tenthProject.jpg";
+import tenthProject from "@/shared/assets/images/tenthProject.webp";
 import eleventhProject from "@/shared/assets/images/eleventhProject.jpg";
 
 export function useData() {

@@ -1,6 +1,6 @@
 import { Footer } from "@/features/footer";
 import { Header } from "../features/header";
-import Main from "@/features/main/components/Main";
+import { Main } from "@/features/main";
 
 function App() {
   return (

@@ -77,6 +77,29 @@ export interface I18nSchema {
       };
     };
   };
+  growth: {
+    title: {
+      firstPart: string;
+      secondPart: string;
+    };
+    subtitle: string;
+    firstStep: {
+      title: string;
+      desc: string;
+    };
+    secondStep: {
+      title: string;
+      desc: string;
+    };
+    thirdStep: {
+      title: string;
+      desc: string;
+    };
+    fourthStep: {
+      title: string;
+      desc: string;
+    };
+  };
   contacts: {
     title: {
       firstPart: string;

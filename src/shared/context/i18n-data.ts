@@ -110,6 +110,29 @@ export const i18n: I18nContextType["i18n"] = {
         },
       },
     },
+    growth: {
+      title: {
+        firstPart: "Растём вместе с",
+        secondPart: "вами",
+      },
+      subtitle: "С каждым новым проектом мы становимся сильнее",
+      firstStep: {
+        title: "Первые проекты",
+        desc: "Начинали с небольших задач - скрипты, боты и простые интеграции. Каждый проект становился опытом, который лёг в основу нашей экспертизы.",
+      },
+      secondStep: {
+        title: "Расширение стека",
+        desc: "Вышли за рамки простых решений - начали брать сложные системные задачи, серверную инфраструктуру и fullstack-разработку. Стек вырос, требования к качеству - тоже.",
+      },
+      thirdStep: {
+        title: "Крупные клиенты",
+        desc: "Пришли заказчики с серьёзными задачами - CRM-системы, платёжные интеграции, VPN-инфраструктура под нагрузку. Научились работать в условиях высоких требований и сжатых сроков.",
+      },
+      fourthStep: {
+        title: "KillCode cегодня",
+        desc: "KillCode - это команда, которая закрывает задачи любой сложности: от MVP до enterprise-решений. Мы не просто пишем код - мы строим продукты, которые работают.",
+      },
+    },
     contacts: {
       title: {
         firstPart: "Работа с",
@@ -268,6 +291,29 @@ export const i18n: I18nContextType["i18n"] = {
           title: "Finished work",
           description: "The product is completely ready for use",
         },
+      },
+    },
+    growth: {
+      title: {
+        firstPart: "We are growing",
+        secondPart: "together",
+      },
+      subtitle: "We are getting stronger with each new project",
+      firstStep: {
+        title: "First projects",
+        desc: "We started with small tasks - scripts, bots, and simple integrations. Each project became an experience that formed the basis of our expertise.",
+      },
+      secondStep: {
+        title: "Stack Expansion",
+        desc: "We went beyond simple solutions and started taking on complex system tasks, server infrastructure, and fullstack development. The stack has grown, and so have the quality requirements.",
+      },
+      thirdStep: {
+        title: "Major clients",
+        desc: "Customers came with serious tasks - CRM systems, payment integrations, VPN infrastructure under load. We have learned how to work in conditions of high demands and tight deadlines.",
+      },
+      fourthStep: {
+        title: "KillCode today",
+        desc: "KillCode is a team that closes tasks of any complexity: from MVP to enterprise solutions. We don't just write code - we build products that work.",
       },
     },
     contacts: {
