@@ -6,7 +6,7 @@ function PortfolioItemsList() {
 
   return (
     <main className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-      {data.reverse().map((item, index) => (
+      {data.map((item, index) => (
         <PortfolioItem
           img={item.img}
           title={item.title}

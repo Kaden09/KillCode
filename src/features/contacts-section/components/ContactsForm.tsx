@@ -103,7 +103,7 @@ function ContactsForm() {
           {...register("message")}
           placeholder={i18n[language].contacts.formFields.message}
           required
-          className={`bg-tertiary-bg py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 rounded-lg sm:rounded-xl md:rounded-2xl text-xs sm:text-sm md:text-base w-full h-full min-h-50 outline-none resize-none`}
+          className={`bg-tertiary-bg py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 rounded-lg sm:rounded-xl md:rounded-2xl text-xs sm:text-sm md:text-base w-full h-full min-h-50 min-[1024px]:min-h-80 outline-none resize-none`}
         ></textarea>
         <p className="text-contrast pl-2 animate-fade-in-right">
           {errors.message?.message}
