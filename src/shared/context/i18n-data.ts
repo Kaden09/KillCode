@@ -126,7 +126,7 @@ export const i18n: I18nContextType["i18n"] = {
       },
       thirdStep: {
         title: "Крупные клиенты",
-        desc: "Пришли заказчики с серьёзными задачами - CRM-системы, платёжные интеграции, VPN-инфраструктура под нагрузку. Научились работать в условиях высоких требований и сжатых сроков.",
+        desc: "Пришли заказчики с серьёзными задачами: CRM, платёжные интеграции, VPN-инфраструктура под нагрузку. Научились работать в условиях высоких требований и сжатых сроков.",
       },
       fourthStep: {
         title: "KillCode cегодня",
@@ -309,7 +309,7 @@ export const i18n: I18nContextType["i18n"] = {
       },
       thirdStep: {
         title: "Major clients",
-        desc: "Customers came with serious tasks - CRM systems, payment integrations, VPN infrastructure under load. We have learned how to work in conditions of high demands and tight deadlines.",
+        desc: "Customers came with serious tasks: CRM, payment integrations, VPN infrastructure under load. We have learned how to work in conditions of high demands and tight deadlines.",
       },
       fourthStep: {
         title: "KillCode today",

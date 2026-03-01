@@ -2,6 +2,7 @@ import { I18nContext } from "@/shared/context/i18n-context";
 import { useContext } from "react";
 import { useInView } from "react-intersection-observer";
 import GrowthScheme from "./GrowthScheme";
+import MiniGrowthScheme from "./MiniGrowthScheme";
 
 function GrowthSection() {
   const { language, i18n } = useContext(I18nContext);
@@ -31,6 +32,7 @@ function GrowthSection() {
         </p>
       </div>
       <GrowthScheme />
+      <MiniGrowthScheme />
     </div>
   );
 }
