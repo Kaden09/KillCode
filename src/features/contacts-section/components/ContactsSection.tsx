@@ -17,7 +17,7 @@ function ContactsSection() {
       id="contacts"
       className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full py-30 sm:py-40 md:py-50"
     >
-      <div className="flex flex-col lg:flex-row items-center gap-11 sm:gap-13 md:gap-15 min-h-115">
+      <div className="flex flex-col lg:flex-row items-start gap-11 sm:gap-13 md:gap-15 min-h-115">
         <div
           ref={ref}
           className="flex flex-col items-center md:items-start gap-5 sm:gap-8 md:gap-12 lg:gap-15 w-full lg:max-w-[50%]"
@@ -39,7 +39,7 @@ function ContactsSection() {
               {i18n[language].contacts.description}
             </p>
           </div>
-          <div ref={ref} className="flex flex-col gap-4">
+          <div ref={ref} className="hidden flex-col gap-4 min-[1024px]:flex">
             <TrustItem
               title={i18n[language].contacts.trustItems.firstItem}
               className={`opacity-0 ${inView && "animate-fade-in-left"}`}

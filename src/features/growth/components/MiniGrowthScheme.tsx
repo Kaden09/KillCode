@@ -42,7 +42,7 @@ function MiniGrowthScheme() {
             style={{ animationDelay: "0.3s" }}
           />
           <div
-            className={`h-0.75 min-[250px]:w-10 min-[400px]:w-20 rounded-full mt-4 bg-linear-to-r from-contrast to-[#141414] opacity-0 ${inView && "animate-fade-in-top"}`}
+            className={`h-0.75 min-[250px]:w-10 min-[400px]:w-20 rounded-full mt-4 min-[350px]:mt-1 min-[400px]:mt-7 min-[410px]:mt-4 min-[480px]:mt-0 min-[500px]:mt-8 min-[550px]:mt-4 bg-linear-to-r from-contrast to-[#141414] opacity-0 ${inView && "animate-fade-in-top"}`}
             style={{ animationDelay: "0.4s" }}
           />
         </div>
