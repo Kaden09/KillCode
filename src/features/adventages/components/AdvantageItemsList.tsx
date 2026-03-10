@@ -1,41 +1,17 @@
-import { CircleDollarSign, Shield, Zap } from "lucide-react";
-import type { IAdvantageItem } from "./AdvantageItem";
+import useAdvantagesData from "../hooks/useAdvantagesData";
 import AdvantageItem from "./AdvantageItem";
-import { useContext, useMemo } from "react";
-import { I18nContext } from "@/shared/context/i18n-context";
 
 function AdvantageItemsList() {
-  const { language, i18n } = useContext(I18nContext);
-
-  const data: IAdvantageItem[] = useMemo(
-    () => [
-      {
-        icon: <Zap width={40} height={40} strokeWidth={1} />,
-        title: i18n[language].advantages.cards.firstCard.title,
-        description: i18n[language].advantages.cards.firstCard.description,
-      },
-      {
-        icon: <Shield width={40} height={40} strokeWidth={1} />,
-        title: i18n[language].advantages.cards.secondCard.title,
-        description: i18n[language].advantages.cards.secondCard.description,
-      },
-      {
-        icon: <CircleDollarSign width={40} height={40} strokeWidth={1} />,
-        title: i18n[language].advantages.cards.tertiaryCard.title,
-        description: i18n[language].advantages.cards.tertiaryCard.description,
-      },
-    ],
-    [language, i18n],
-  );
+  const { data } = useAdvantagesData();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-12 relative">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 min-[640px]:gap-6 min-[1300px]:gap-10 relative">
       {data.map((item, index) => (
         <AdvantageItem
           key={item.title}
-          icon={item.icon}
+          Icon={item.Icon}
           title={item.title}
-          description={item.description}
+          desc={item.desc}
           style={{ animationDelay: `${index * 0.1}s` }}
         />
       ))}

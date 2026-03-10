@@ -1,9 +1,9 @@
 import { useInView } from "react-intersection-observer";
-import { useData } from "./data";
+import { useProductsData } from "../hooks/useProductsData";
 import ProductItemsList from "./ProductItemsList";
 
 function ProductSection() {
-  const { data, data2 } = useData();
+  const { data, data2 } = useProductsData();
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,

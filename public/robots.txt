@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://killcode.dev/sitemap.xml

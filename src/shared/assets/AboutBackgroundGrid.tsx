@@ -4,7 +4,7 @@ function AboutBackgroundGrid() {
       viewBox="0 0 579 598"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="opacity-0 w-100 h-100 min-[500px]:w-110 min-[500px]:h-110 min-[620px]:w-120 min-[620px]:h-120 min-[1024px]:w-120 min-[1024px]:h-120 min-[1348px]:w-144.75 min-[1348px]:h-149.5 animate-fade-in-left"
+      className="opacity-0 w-90 h-90 min-[500px]:w-110 min-[500px]:h-110 min-[620px]:w-120 min-[620px]:h-120 min-[1024px]:w-120 min-[1024px]:h-120 min-[1348px]:w-144.75 min-[1348px]:h-149.5 animate-fade-in-left"
     >
       <line x1="56" y1="389.5" x2="440" y2="389.5" stroke="#232323" />
       <line x1="49" y1="489.5" x2="453" y2="489.5" stroke="#232323" />

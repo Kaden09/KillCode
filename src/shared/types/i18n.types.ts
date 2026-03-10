@@ -1,3 +1,32 @@
+import type { ElementType } from "react";
+
+interface PortfolioProject {
+  img: string;
+  title: string;
+  desc: string;
+  cost: number;
+  stack: string[];
+}
+
+interface ContactItem {
+  Icon: ElementType;
+  title: string;
+  value: string;
+  link: string;
+  ariaLabel: string;
+}
+
+interface AdvantageCard {
+  Icon: ElementType;
+  title: string;
+  desc: string;
+}
+
+interface GrowthStep {
+  title: string;
+  desc: string;
+}
+
 export interface I18nSchema {
   header: {
     navigation: {
@@ -32,20 +61,7 @@ export interface I18nSchema {
       secondPart: string;
     };
     subtitle: string;
-    cards: {
-      firstCard: {
-        title: string;
-        description: string;
-      };
-      secondCard: {
-        title: string;
-        description: string;
-      };
-      tertiaryCard: {
-        title: string;
-        description: string;
-      };
-    };
+    cards: AdvantageCard[];
   };
   instruction: {
     title: {
@@ -83,22 +99,7 @@ export interface I18nSchema {
       secondPart: string;
     };
     subtitle: string;
-    firstStep: {
-      title: string;
-      desc: string;
-    };
-    secondStep: {
-      title: string;
-      desc: string;
-    };
-    thirdStep: {
-      title: string;
-      desc: string;
-    };
-    fourthStep: {
-      title: string;
-      desc: string;
-    };
+    growthSteps: GrowthStep[];
   };
   contacts: {
     title: {
@@ -106,11 +107,7 @@ export interface I18nSchema {
       secondPart: string;
     };
     description: string;
-    trustItems: {
-      firstItem: string;
-      secondItem: string;
-      tertiaryItem: string;
-    };
+    trustItems: string[];
     formFields: {
       name: string;
       contact: string;
@@ -119,17 +116,7 @@ export interface I18nSchema {
       loading: string;
       sent: string;
     };
-    contactItems: {
-      firstItem: {
-        title: string;
-      };
-      secondItem: {
-        title: string;
-      };
-      tertiaryItem: {
-        title: string;
-      };
-    };
+    contactItems: ContactItem[];
     errorMessages: {
       name: {
         error: string;
@@ -144,7 +131,9 @@ export interface I18nSchema {
       };
     };
   };
+  portfolio: PortfolioProject[];
   footer: {
     slogan: string;
+    contacts: Omit<ContactItem, "title" | "value">[];
   };
 }

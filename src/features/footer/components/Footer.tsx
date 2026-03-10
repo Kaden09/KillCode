@@ -1,14 +1,14 @@
 import { Logo } from "@/shared";
-import FooterContactsList from "./FooterContactsList";
 import { useInView } from "react-intersection-observer";
 import { useContext } from "react";
 import { I18nContext } from "@/shared/context/i18n-context";
+import { SmallContactsList } from "@/features/contacts";
 
 function Footer() {
   const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
-    triggerOnce: true, // Срабатывает только один раз
+    triggerOnce: true,
   });
 
   return (
@@ -23,7 +23,7 @@ function Footer() {
       >
         {i18n[language].footer.slogan}
       </h3>
-      <FooterContactsList />
+      <SmallContactsList />
     </footer>
   );
 }

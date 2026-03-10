@@ -14,7 +14,7 @@ function InstructionSection() {
   return (
     <div
       id="instruction"
-      className="relative flex flex-col justify-center items-center gap-15 sm:gap-20 md:gap-25 lg:gap-30 py-10 w-full"
+      className="relative flex flex-col justify-center items-center gap-15 sm:gap-20 md:gap-0 py-10 w-full"
     >
       <div className="flex flex-col gap-4 sm:gap-5 md:gap-6">
         <h2
@@ -29,7 +29,7 @@ function InstructionSection() {
         </h2>
         <p
           ref={ref}
-          className={`text-secondary-font text-center max-w-160 text-sm sm:text-base md:text-lg lg:text-xl opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
+          className={`text-secondary-font text-center leading-4 sm:leading-6 md:leading-7 max-w-160 text-xs sm:text-base md:text-lg opacity-0 ${inView && "animate-fade-in-bottom-100"}`}
           style={{ animationDelay: "0.1s" }}
         >
           {i18n[language].instruction.subtitle}

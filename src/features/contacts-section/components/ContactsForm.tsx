@@ -1,9 +1,12 @@
-import { I18nContext } from "@/shared/context/i18n-context";
 import axios from "axios";
+import { I18nContext } from "@/shared/context/i18n-context";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useInView } from "react-intersection-observer";
-import { useContactSchema, type ContactFields } from "./schema";
+import {
+  useContactSchema,
+  type ContactFields,
+} from "../hooks/useContactsSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -74,7 +77,7 @@ function ContactsForm() {
             {...register("name")}
             required
             placeholder={i18n[language].contacts.formFields.name}
-            className={`bg-tertiary-bg text-xs sm:text-sm md:text-base rounded-lg sm:rounded-xl md:rounded-2xl py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 outline-none w-full opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
+            className={`bg-tertiary-bg text-xs sm:text-sm md:text-base rounded-lg sm:rounded-xl md:rounded-2xl py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 outline-none w-full focus:bg-tertiary-bg/70 duration-150 opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
             style={{ animationDelay: "0.1s" }}
           />
           <p className="text-contrast pl-2 animate-fade-in-right">
@@ -87,7 +90,7 @@ function ContactsForm() {
             {...register("contact")}
             required
             placeholder={i18n[language].contacts.formFields.contact}
-            className={`bg-tertiary-bg text-xs sm:text-sm md:text-base rounded-lg sm:rounded-xl md:rounded-2xl py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 outline-none w-full opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
+            className={`bg-tertiary-bg text-xs sm:text-sm md:text-base rounded-lg sm:rounded-xl md:rounded-2xl py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 outline-none w-full focus:bg-tertiary-bg/70 duration-150 opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
             style={{ animationDelay: "0.2s" }}
           />
           <p className="text-contrast pl-2 animate-fade-in-right">
@@ -103,7 +106,7 @@ function ContactsForm() {
           {...register("message")}
           placeholder={i18n[language].contacts.formFields.message}
           required
-          className={`bg-tertiary-bg py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 rounded-lg sm:rounded-xl md:rounded-2xl text-xs sm:text-sm md:text-base w-full h-full min-h-50 min-[1024px]:min-h-85 outline-none resize-none`}
+          className={`bg-tertiary-bg py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-5 rounded-lg sm:rounded-xl md:rounded-2xl text-xs sm:text-sm md:text-base w-full h-full min-h-50 min-[1024px]:min-h-85 focus:bg-tertiary-bg/70 duration-150 outline-none resize-none`}
         ></textarea>
         <p className="text-contrast pl-2 animate-fade-in-right">
           {errors.message?.message}

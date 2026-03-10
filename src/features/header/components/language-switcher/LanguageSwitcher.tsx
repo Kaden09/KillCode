@@ -1,8 +1,9 @@
 import { ChevronDown, Languages } from "lucide-react";
 import { useContext, useRef, useState } from "react";
 import LanguageSwitcherModal from "./LanguageSwitcherModal";
-import { I18nContext, type Language } from "@/shared/context/i18n-context";
+import { I18nContext } from "@/shared/context/i18n-context";
 import { useClickOutside } from "@/shared/hooks/useClickOutside";
+import type { Language } from "@/shared/context";
 
 function LanguageSwitcher() {
   const [modalOpen, setModalOpen] = useState(false);

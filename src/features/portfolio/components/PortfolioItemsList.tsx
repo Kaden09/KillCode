@@ -1,8 +1,8 @@
-import { useData } from "./data";
+import { usePortfolioItemsData } from "../hooks/usePortfolioItemsData";
 import PortfolioItem from "./PortfolioItem";
 
 function PortfolioItemsList() {
-  const { data } = useData();
+  const { data } = usePortfolioItemsData();
 
   return (
     <main className="grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -12,7 +12,7 @@ function PortfolioItemsList() {
           title={item.title}
           desc={item.desc}
           cost={item.cost}
-          technology={item.technology}
+          stack={item.stack}
           style={{ animationDelay: `${index * 0.1}s` }}
         />
       ))}

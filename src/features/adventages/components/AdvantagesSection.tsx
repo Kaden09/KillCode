@@ -7,7 +7,7 @@ function AdvantagesSection() {
   const { language, i18n } = useContext(I18nContext);
   const { ref, inView } = useInView({
     threshold: 0.1,
-    triggerOnce: true, // Срабатывает только один раз
+    triggerOnce: true,
   });
 
   return (
@@ -15,7 +15,7 @@ function AdvantagesSection() {
       id="advantages"
       className="flex flex-col justify-center items-center gap-11 sm:gap-13 md:gap-15 lg:gap-17 py-30 sm:py-40 md:py-50"
     >
-      <div className="flex flex-col gap-4 sm:gap-5 md:gap-6">
+      <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6">
         <h2
           ref={ref}
           className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-semibold opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
@@ -27,7 +27,7 @@ function AdvantagesSection() {
         </h2>
         <p
           ref={ref}
-          className={`text-secondary-font text-center max-w-200 text-sm sm:text-base md:text-lg lg:text-xl opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
+          className={`text-secondary-font leading-4 sm:leading-6 md:leading-7 text-center max-w-200 text-xs sm:text-base md:text-lg opacity-0 ${inView && "animate-fade-in-bottom-1s"}`}
           style={{ animationDelay: "0.1s" }}
         >
           {i18n[language].advantages.subtitle}

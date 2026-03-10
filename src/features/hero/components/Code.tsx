@@ -38,7 +38,7 @@ function Code() {
         setIsTyping(false);
         clearInterval(typingEffect);
       }
-    }, 6); // Скорость печати
+    }, 6);
 
     return () => clearInterval(typingEffect);
   }, []);
@@ -87,7 +87,7 @@ function Code() {
 
   return (
     <div className="relative w-[49%] opacity-0 animate-fade-in-right z-99 hidden lg:block">
-      <div className="bg-code-bg rounded-[44px] pt-5 pl-9 pb-5 pr-30 min-[1024px]:min-h-102 min-[1348px]:min-h-127 min-[1650px]:min-h-172 border border-border rounded-r-none border-r-0 relative">
+      <div className="bg-code-bg rounded-r-none min-[1024px]:rounded-l-4xl min-[1500px]:rounded-l-[44px] pt-5 pl-9 pb-5 pr-30 min-[1024px]:min-h-102 min-[1348px]:min-h-127 min-[1650px]:min-h-172 border border-border border-r-0 relative">
         <div className="flex items-center">
           <div className="flex gap-3">
             <div className="min-[1024px]:w-2.5 min-[1024px]:h-2.5 min-[1650px]:w-3 min-[1650px]:h-3 bg-contrast rounded-full opacity-0 animate-fade-in-bottom-1s"></div>

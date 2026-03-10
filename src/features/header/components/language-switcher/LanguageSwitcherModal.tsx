@@ -1,5 +1,6 @@
 import { useContext, type Dispatch, type SetStateAction } from "react";
-import { I18nContext, type Language } from "@/shared/context/i18n-context";
+import { I18nContext } from "@/shared/context/i18n-context";
+import type { Language } from "@/shared/context";
 
 interface ILanguageSwitcherModal {
   toggleLanguage: (language: Language) => void;
@@ -13,6 +14,7 @@ function LanguageSwitcherModal({
   className = "",
 }: ILanguageSwitcherModal) {
   const { language } = useContext(I18nContext);
+
   return (
     <ul
       onClick={() => setModalOpen(false)}
