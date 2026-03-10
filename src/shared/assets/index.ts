@@ -14,3 +14,4 @@ export { default as project8 } from "./images/project8.jpg";
 export { default as project9 } from "./images/project9.jpg";
 export { default as project10 } from "./images/project10.png";
 export { default as project11 } from "./images/project11.webp";
+export { default as project12 } from "./images/project12.jpg";

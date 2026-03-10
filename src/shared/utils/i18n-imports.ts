@@ -13,6 +13,7 @@ import {
   project9,
   project10,
   project11,
+  project12,
 } from "../assets";
 import { CircleDollarSign, Shield, Zap } from "lucide-react";
 
@@ -37,4 +38,5 @@ export const images = {
   project9,
   project10,
   project11,
+  project12,
 };

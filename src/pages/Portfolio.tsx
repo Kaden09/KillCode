@@ -8,7 +8,7 @@ function Portfolio() {
       <Header />
       <div className="w-full flex flex-col min-[250px]:items-center gap-2 ml-4">
         <h1 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold">
-          Наше портфолио
+          Наше <span className="text-contrast">портфолио</span>
         </h1>
         <p className="text-secondary-font min-[250px]:text-center text-xs sm:text-sm sm:text-start md:text-lg">
           Здесь мы выкладываем часть наших проектов
